@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f1f1f3;
   --foreground: #171717;
 }
 
@@ -12,10 +12,49 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  }
+} */
+
+@keyframes gentle-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(-25px);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+.animate-gentle-bounce {
+  animation: gentle-bounce 3s infinite;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .primary-color {
+    color: #050660;
+  }
+  .bg-primary-color {
+    background-color: #050660;
+  }
+  .secondary-color {
+    color: #01bbf8;
+  }
+  .bg-secondary-color {
+    background-color: #01bbf8;
   }
 }
 
