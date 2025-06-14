@@ -13,7 +13,7 @@ const NavBar = () => {
     <>
       {/* Desktop Navigation */}
       <nav className="hidden md:flex items-center justify-between bg-white rounded-full py-3 px-5 shadow-sm">
-        <div className="relative w-full max-w-[100px] ">
+        <Link href="/" className="relative w-full max-w-[100px] ">
           <Image
             className="w-10 h-10"
             src="/logopng.png"
@@ -23,7 +23,7 @@ const NavBar = () => {
             priority
             layout="responsive"
           />
-        </div>
+        </Link>
 
         <ul className="flex gap-5">
           {navItems.map((item) => (

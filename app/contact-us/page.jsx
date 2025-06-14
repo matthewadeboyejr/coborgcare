@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Btn from "@/components/Btn";
-import { FaAt, FaLocationArrow, FaPhone } from "react-icons/fa";
+import { FaAt, FaFax, FaLocationArrow, FaPhone } from "react-icons/fa";
 import Map from "@/components/home/Map";
 
 const ContactUs = () => {
@@ -43,7 +43,21 @@ const ContactUs = () => {
                     href="tel:+1629138798"
                     className="text-[#595959] hover:text-primary-color transition-colors"
                   >
-                    +1 (629) 138-798
+                    6475089094
+                  </a>
+                </div>
+              </li>
+              <li className="flex gap-4 items-start">
+                <div className="bg-primary-color flex justify-center items-center w-fit p-3 text-white rounded-full mt-1">
+                  <FaFax className="text-lg" />
+                </div>
+                <div>
+                  <h3 className="font-medium text-lg">Fax</h3>
+                  <a
+                    href="tel:+1629138798"
+                    className="text-[#595959] hover:text-primary-color transition-colors"
+                  >
+                    (905) 2917547
                   </a>
                 </div>
               </li>

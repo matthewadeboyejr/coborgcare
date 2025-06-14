@@ -38,7 +38,7 @@ const Why = () => {
               <span className="text-[#0E31AC] text-3xl">
                 <MdOutlineHealthAndSafety />
               </span>
-              <span className="font-semibold">20 years Experience</span>
+              <span className="font-semibold">Years Experience</span>
             </p>
             <p className="bg-white/50 rounded-b-4xl p-3 flex  items-center gap-3 text-sm sm:text-base md:text-lg  text-[#595959] ">
               <span className="text-[#0E31AC] text-3xl">

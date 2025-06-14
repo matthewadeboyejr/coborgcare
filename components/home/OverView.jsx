@@ -35,7 +35,7 @@ const OverView = () => {
         <div className="flex flex-col gap-3 sm:gap-4">
           <div className="h-[300px] sm:h-[350px] md:h-[400px] relative w-full aspect-square max-w-full overflow-hidden rounded-xl sm:rounded-2xl">
             <Image
-              src="/doctor-male.jpg"
+              src="/doctor-male.png"
               alt="doctor-male"
               fill
               className="object-cover"

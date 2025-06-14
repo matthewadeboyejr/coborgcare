@@ -27,6 +27,8 @@ export default function Footer() {
               Canada
             </p>
             <p>Opon: Mon - Sat 9:00AM - 6:00PM</p>
+            <p>Phone: 6475089094</p>
+            <p>Fax: (905) 2917547</p>
           </div>
         </div>
         <FooterNavWeb />

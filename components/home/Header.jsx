@@ -28,7 +28,7 @@ const Header = () => {
           <div className="relative w-full max-w-[350px] lg:w-[350px]">
             <Image
               className="rounded-2xl sm:rounded-3xl lg:rounded-4xl animate-gentle-bounce w-full h-auto"
-              src="/header-image.jpg"
+              src="/drusman.png"
               alt="Healthcare illustration"
               width={350}
               height={350}
