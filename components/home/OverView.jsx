@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { RiHospitalFill } from "react-icons/ri";
 import Btn from "../Btn";
+import Links from "../Links";
 
 const OverView = () => {
   return (
@@ -19,12 +20,12 @@ const OverView = () => {
             Convenient, quality medical care in the heart of Coburg
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-center md:text-left text-[#595959] max-w-[600px] mx-auto md:mx-0">
-            We've been providing some of the best private medical care in London
-            for over 25 years. Your health lies at the heart of everything we
-            do.
+            We've been providing some of the best private medical care in
+            Coburg,canada for for years. Your health lies at the heart of
+            everything we do.
           </p>
           <div className="flex justify-center md:justify-start">
-            <Btn title={"Book Appointment"} />
+            <Links title={"Book Appointment Now"} action="/appointments" />
           </div>
         </div>
       </div>
@@ -35,7 +36,7 @@ const OverView = () => {
         <div className="flex flex-col gap-3 sm:gap-4">
           <div className="h-[300px] sm:h-[350px] md:h-[400px] relative w-full aspect-square max-w-full overflow-hidden rounded-xl sm:rounded-2xl">
             <Image
-              src="/doctor-male.png"
+              src="/overview1.png"
               alt="doctor-male"
               fill
               className="object-cover"
@@ -74,7 +75,7 @@ const OverView = () => {
           </div>
           <div className="h-[300px] sm:h-[350px] md:h-[400px] relative w-full aspect-square max-w-full overflow-hidden rounded-xl sm:rounded-2xl order-1 sm:order-2">
             <Image
-              src="/doctor-female.jpg"
+              src="/overview2.png"
               alt="doctor-female"
               fill
               className="object-cover"

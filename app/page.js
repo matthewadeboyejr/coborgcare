@@ -1,5 +1,6 @@
 import Blog from "@/components/home/Blog";
 import AppointmentBooking from "@/components/home/bookingappointment/AppointmentBooking";
+import ZohoBooking from "@/components/home/bookingappointment/ZohoBooking";
 import Footer from "@/components/home/Footer";
 import Header from "@/components/home/Header";
 import Map from "@/components/home/Map";
@@ -21,6 +22,8 @@ export default function Home() {
       <OurDoctors />
       <Blog />
       <MarqueeService />
+      <ZohoBooking />
+
       <Map />
     </div>
   );

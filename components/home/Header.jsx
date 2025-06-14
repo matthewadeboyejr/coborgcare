@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import Btn from "../Btn";
+import Links from "../Links";
 
 const Header = () => {
   return (
     <header className="w-full mb-24 mt-7 md:mt-24 ">
       <h1 className="text-5xl   md:text-[140px] xl:text-[210px] font-semibold  md:font-medium  w-full text-center leading-tight sm:leading-snug md:leading-normal">
-        Coborg Care
+        Coburg Care
       </h1>
 
       <div className="flex flex-col-reverse lg:flex-row justify-between gap-8  ">
@@ -19,7 +19,7 @@ const Header = () => {
               welcoming environment.
             </p>
             <div className="md:justify-start w-full hidden md:flex">
-              <Btn title={"Book Now"} />
+              <Links title={"Book Now"} action={"/appointments"} />
             </div>
           </div>
         </div>
@@ -28,7 +28,7 @@ const Header = () => {
           <div className="relative w-full max-w-[350px] lg:w-[350px]">
             <Image
               className="rounded-2xl sm:rounded-3xl lg:rounded-4xl animate-gentle-bounce w-full h-auto"
-              src="/drusman.png"
+              src="/headerImage.png"
               alt="Healthcare illustration"
               width={350}
               height={350}

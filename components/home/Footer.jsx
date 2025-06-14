@@ -143,10 +143,10 @@ export function FooterNavWeb() {
         <p className="font-semibold  ">Quick Link</p>
         <ul className="space-y-3 font-medium">
           <li className="cursor-pointer opacity-90">
-            <Link href="/">Book Now</Link>
+            <Link href="/appointments">Book Now</Link>
           </li>
           <li className="cursor-pointer opacity-90">
-            <Link href="/">Contact us</Link>
+            <Link href="/contact-us">Contact us</Link>
           </li>
           <li className="cursor-pointer opacity-90">
             <Link href="/">Address</Link>
@@ -172,7 +172,7 @@ export function FooterNavWeb() {
         <p className="font-semibold  ">Company</p>
         <ul className="space-y-3 font-medium">
           <li className="cursor-pointer opacity-90">
-            <Link href="/">About Us</Link>
+            <Link href="/about-us">About Us</Link>
           </li>
           <li className="cursor-pointer opacity-90">
             <Link href="/">Careers</Link>

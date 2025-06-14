@@ -1,13 +1,12 @@
 import Btn from "@/components/Btn";
+import Links from "@/components/Links";
 import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
-import {
-  MdOutlineHealthAndSafety,
-  MdOutlineSelfImprovement,
-} from "react-icons/md";
+import { FiLinkedin, FiTwitter } from "react-icons/fi";
+import { MdOutlineHealthAndSafety } from "react-icons/md";
 import { RiHospitalFill } from "react-icons/ri";
-import { SlBadge } from "react-icons/sl";
+
 import { TbHealthRecognition } from "react-icons/tb";
 import { VscDebugContinue } from "react-icons/vsc";
 
@@ -36,7 +35,7 @@ const About = () => {
               services in a professional and patient-friendly environment.
             </p>
             <div className="flex justify-center md:justify-start">
-              <Btn title={"Book Appointment"} />
+              <Links title={"Book Appointment Now"} action="/appointments" />
             </div>
           </div>
         </div>
@@ -47,7 +46,7 @@ const About = () => {
           <div className="flex flex-col gap-3 sm:gap-4">
             <div className="h-[300px] sm:h-[350px] md:h-[400px] relative w-full aspect-square max-w-full overflow-hidden rounded-xl sm:rounded-2xl">
               <Image
-                src="/doctor-male.png"
+                src="/overview1.png"
                 alt="doctor-male"
                 fill
                 className="object-cover"
@@ -86,7 +85,7 @@ const About = () => {
             </div>
             <div className="h-[300px] sm:h-[350px] md:h-[400px] relative w-full aspect-square max-w-full overflow-hidden rounded-xl sm:rounded-2xl order-1 sm:order-2">
               <Image
-                src="/doctor-female.jpg"
+                src="/overview2.png"
                 alt="doctor-female"
                 fill
                 className="object-cover"
@@ -161,6 +160,113 @@ const About = () => {
           </div>
         </section>
       </section>
+
+      <div className="mb-24">
+        <Marquee>
+          <h2 className=" opacity-50 text-4xl  md:text-[140px] xl:text-[210px] font-semibold  md:font-medium mb-3 w-full text-center leading-tight sm:leading-snug md:leading-normal">
+            Meet Our Founder, Dr. Isah Usman..
+          </h2>
+        </Marquee>
+        <section className="flex flex-col-reverse lg:flex-row justify-between gap-8 lg:gap-12 rounded-3xl bg-[#0B95C7]/10 p-5">
+          {/* Image Section (50% width on lg screens) */}
+          <div className="w-full lg:w-[50%] space-y-5">
+            <div className="relative w-full aspect-square overflow-hidden rounded-xl sm:rounded-2xl">
+              <Image
+                src="/drusman.png"
+                alt="Dr. Isah Usman"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="relative w-full aspect-square overflow-hidden rounded-xl sm:rounded-2xl">
+              <Image
+                src="/drUsman2.png"
+                alt="Dr. Isah Usman"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+
+          {/* Text Content (50% width on lg screens) */}
+          <div className="w-full lg:w-[50%] px-5 md:pr-10 flex items-center">
+            <div className="space-y-4 sm:space-y-6 w-full">
+              {/* Tagline */}
+              <div className="flex justify-center md:block">
+                <p className="bg-[#EDEEF1] text-[#0E31AC] text-sm py-2 px-4 rounded-full w-fit">
+                  The Founder
+                </p>
+              </div>
+
+              {/* Name & Bio */}
+              <div>
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-center md:text-left leading-tight">
+                  Dr. Isah Usman
+                </h2>
+                <p className=" md:text-left text-sm sm:text-base md:text-lg text-[#595959] mt-4">
+                  Dr. Isah Usman is a distinguished UK-trained Family Physician
+                  and an experienced General Practitioner renowned for his
+                  unwavering commitment to high-quality, patient-centered care.
+                  With a rich background in both hospital and community
+                  healthcare settings, he brings a wealth of expertise,
+                  compassion, and evidence-based practice to his role as the
+                  founder of this Family Care Clinic.
+                  <br />
+                  <br />
+                  Trained in the United Kingdom, Dr. Usman developed his medical
+                  acumen within one of the world’s most advanced healthcare
+                  systems. This experience equipped him with a deep
+                  understanding of international best practices, which he
+                  seamlessly integrates into his practice while remaining
+                  attuned to the unique needs of his local community. His
+                  approach combines clinical excellence, preventive care, and
+                  personalized treatment, ensuring that every patient receives
+                  holistic and effective medical attention.
+                  <br />
+                  <br />
+                  Driven by a vision of accessible and compassionate healthcare,
+                  Dr. Usman established this clinic with a clear mission: to
+                  provide affordable, high-quality medical services that
+                  prioritize the well-being of families. Beyond his clinical
+                  duties, he is deeply invested in shaping the future of
+                  healthcare—mentoring emerging doctors, leading medical
+                  outreach initiatives, and advocating for policies that enhance
+                  healthcare delivery for all.
+                </p>
+              </div>
+
+              {/* Social Links */}
+              <div className="flex justify-center md:block">
+                <div className="flex space-x-4 mt-6">
+                  <a
+                    href="https://www.linkedin.com/in/isah-usman-651991131/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full bg-[#EDEEF1] hover:bg-white/90 transition-colors"
+                  >
+                    <FiLinkedin className="w-5 h-5 text-[#0E31AC] hover:text-[#0E31AC]/80" />
+                  </a>
+                  <a
+                    href="https://twitter.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full bg-[#EDEEF1] hover:bg-white/90 transition-colors"
+                  >
+                    <FiTwitter className="w-5 h-5 text-[#0E31AC] hover:text-[#0E31AC]/80" />
+                  </a>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <div className="flex justify-center md:justify-start pt-4">
+                <Links title={"Book Appointment Now"} action="/appointments" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };

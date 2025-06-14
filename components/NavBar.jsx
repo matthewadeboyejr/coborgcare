@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { RiMenuLine, RiCloseLine } from "react-icons/ri";
 import Btn from "./Btn";
 import Image from "next/image";
+import Links from "./Links";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +39,7 @@ const NavBar = () => {
           ))}
         </ul>
         <div>
-          <Btn title={"Book Appointment"} />
+          <Links title={"Book Appointment Now"} action="/appointments" />
         </div>
       </nav>
 
