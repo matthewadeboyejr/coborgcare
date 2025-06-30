@@ -32,7 +32,7 @@ const Blog = () => {
   ];
 
   return (
-    <section className=" mb-24 ">
+    <section id="blog" className=" mb-24 ">
       <div className="mb-10 flex flex-col items-center ">
         <p className=" bg-[#EDEEF1] text-[#0E31AC]  text-sm py-2 px-4 rounded-full w-fit">
           Health Article

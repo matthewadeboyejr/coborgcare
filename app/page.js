@@ -7,6 +7,7 @@ import Map from "@/components/home/Map";
 import MarqueeService from "@/components/home/MarqueeService";
 import OurDoctors from "@/components/home/OurDoctors";
 import OverView from "@/components/home/OverView";
+import RespectfulPolicy from "@/components/home/RespectfulPolicy";
 import Testimonials from "@/components/home/Testimonials";
 import Why from "@/components/home/Why";
 import NavBar from "@/components/NavBar";
@@ -23,7 +24,7 @@ export default function Home() {
       <Blog />
       <MarqueeService />
       <ZohoBooking />
-
+      <RespectfulPolicy />
       <Map />
     </div>
   );

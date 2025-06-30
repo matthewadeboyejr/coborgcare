@@ -1,10 +1,71 @@
-import React from "react";
-import Image from "next/image";
-import Btn from "@/components/Btn";
+"use client";
+import React, { useRef, useState } from "react";
 import { FaAt, FaFax, FaLocationArrow, FaPhone } from "react-icons/fa";
 import Map from "@/components/home/Map";
+import emailjs from "@emailjs/browser";
 
 const ContactUs = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+  const formRef = useRef();
+
+  const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID;
+  const businessTemplateID = process.env.NEXT_PUBLIC_BUSINESS_TEMPLATE_ID;
+  const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
+  //const clientTemplateID = process.env.NEXT_PUBLIC_CLIENT_TEMPLATE_ID;
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const name = e.target.name.value.trim();
+    const email = e.target.email.value.trim();
+    const phone = e.target.phone.value.trim();
+    const message = e.target.message.value.trim();
+
+    if (!name || !email || !message) {
+      setSubmitStatus("error");
+      setIsSubmitting(false);
+      return;
+    }
+
+    const formData = {
+      name,
+      email,
+      phone,
+      booked_date: new Date().toLocaleString(),
+      message,
+      timestamp: Date.now(),
+    };
+
+    try {
+      if (!serviceID || !businessTemplateID || !publicKey) {
+        throw new Error("Email service credentials are missing");
+      }
+      const response = await emailjs.send(
+        serviceID,
+        businessTemplateID,
+        formData,
+        publicKey
+      );
+
+      console.log(response);
+      if (response.status === 200) {
+        setSubmitStatus("success");
+        formRef.current.reset();
+      } else {
+        console.error("EmailJS failed response:", response);
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setSubmitStatus(null), 4000);
+    }
+  };
+
   return (
     <>
       <section className="w-full mb-16 md:mb-24 mt-7 px-4 sm:px-6 md:px-8 lg:px-12">
@@ -81,7 +142,11 @@ const ContactUs = () => {
 
           {/* Contact Form */}
           <div className="w-full lg:w-3/5">
-            <form className="space-y-5 md:space-y-6">
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="space-y-5 md:space-y-6"
+            >
               <div className="flex flex-col md:flex-row gap-4 md:gap-6">
                 <div className="w-full">
                   <label htmlFor="name" className="sr-only">
@@ -89,7 +154,9 @@ const ContactUs = () => {
                   </label>
                   <input
                     id="name"
+                    name="name"
                     placeholder="Full Name"
+                    required
                     className="border w-full rounded-full px-5 py-3 md:py-4 border-black/10 focus:outline-none focus:ring-2 focus:ring-primary-color/50"
                   />
                 </div>
@@ -99,8 +166,10 @@ const ContactUs = () => {
                   </label>
                   <input
                     id="email"
+                    name="email"
                     type="email"
                     placeholder="Email"
+                    required
                     className="border w-full rounded-full px-5 py-3 md:py-4 border-black/10 focus:outline-none focus:ring-2 focus:ring-primary-color/50"
                   />
                 </div>
@@ -111,8 +180,10 @@ const ContactUs = () => {
                 </label>
                 <input
                   id="phone"
+                  name="phone"
                   type="tel"
                   placeholder="Phone Number"
+                  required
                   className="border w-full rounded-full px-5 py-3 md:py-4 border-black/10 focus:outline-none focus:ring-2 focus:ring-primary-color/50"
                 />
               </div>
@@ -122,13 +193,33 @@ const ContactUs = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   placeholder="Your message"
+                  required
                   rows={5}
                   className="border w-full rounded-3xl px-5 py-3 border-black/10 focus:outline-none focus:ring-2 focus:ring-primary-color/50"
                 />
               </div>
+
+              {submitStatus === "success" && (
+                <div className="bg-green-100 text-green-800 px-4 py-3 rounded-lg">
+                  Thanks! We've received your request and will get back to you
+                  shortly.
+                </div>
+              )}
+              {submitStatus === "error" && (
+                <div className="bg-red-100 text-red-800 px-4 py-3 rounded-lg">
+                  Something went wrong. Please try again later.
+                </div>
+              )}
               <div className="flex justify-center md:justify-start">
-                <Btn title={"Send Message"} className="w-full md:w-auto" />
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="bg-primary-color px-6 py-3 sm:px-6 sm:py-4 rounded-full text-white hover:bg-[#0a2477] transition-colors duration-300 text-sm sm:text-base font-medium w-full md:w-auto"
+                >
+                  {isSubmitting ? "Submitting..." : "Send Message"}
+                </button>
               </div>
             </form>
           </div>

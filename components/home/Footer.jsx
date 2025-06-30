@@ -72,17 +72,17 @@ export function FooterNavMobile() {
     {
       title: "Resources",
       links: [
-        { href: "/", label: "Help & support" },
-        { href: "/", label: "Blog" },
+        { href: "/contact-us", label: "Help & support" },
+        { href: "/#blog", label: "Blog" },
         { href: "/", label: "Podcast" },
       ],
     },
     {
       title: "Company",
       links: [
-        { href: "/", label: "About Us" },
-        { href: "/", label: "Careers" },
-        { href: "/", label: "Privacy policy" },
+        { href: "/about-us", label: "About Us" },
+        { href: "/contact-us", label: "Careers" },
+        { href: "/policy", label: "Privacy policy" },
       ],
     },
   ];
