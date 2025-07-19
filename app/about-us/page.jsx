@@ -19,7 +19,7 @@ const About = () => {
           <div className="space-y-4 sm:space-y-6 w-full">
             <div className="flex md:block justify-center ">
               <p className=" bg-white flex justify-center text-[#0E31AC]  text-sm py-2 px-4 rounded-full w-fit">
-                Coburg Care Clinic
+                Cobourg Care Clinic
               </p>
             </div>
 
@@ -27,12 +27,13 @@ const About = () => {
               Your trusted health partner
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-center md:text-left text-[#595959] max-w-[600px] mx-auto md:mx-0">
-              Coburg Care Clinic is a trusted family healthcare provider located
-              in the heart of Coburg, Ontario. We’re dedicated to delivering
-              compassionate, accessible, and high-quality medical care to
-              individuals and families in the community. With a strong focus on
-              wellness and preventive health, our team provides a wide range of
-              services in a professional and patient-friendly environment.
+              Cobourg Care Clinic is a trusted family healthcare provider
+              located in the heart of Cobourg, Ontario. We’re dedicated to
+              delivering compassionate, accessible, and high-quality medical
+              care to individuals and families in the community. With a strong
+              focus on wellness and preventive health, our team provides a wide
+              range of services in a professional and patient-friendly
+              environment.
             </p>
             <div className="flex justify-center md:justify-start">
               <Links title={"Book Appointment Now"} action="/appointments" />
@@ -59,10 +60,10 @@ const About = () => {
                   <RiHospitalFill size={20} />
                 </span>
                 <h3 className="text-base sm:text-lg md:text-xl font-semibold">
-                  24/7 services
+                  Premium services
                 </h3>
                 <p className="text-xs sm:text-sm text-[#595959]">
-                  Open 7 days a week, weekends & evenings, most holidays.
+                  Available most times to serve you and care
                 </p>
               </div>
             </div>
@@ -119,7 +120,7 @@ const About = () => {
             <div className="space-y-4 sm:space-y-6 w-full">
               <div className="flex md:block justify-center ">
                 <p className=" bg-white flex justify-center text-[#0E31AC]  text-sm py-2 px-4 rounded-full w-fit">
-                  Coburg Care Clinic
+                  cobourg Care Clinic
                 </p>
               </div>
               <h2 className="text-3xl  lg:text-4xl font-semibold text-center md:text-left leading-tight">

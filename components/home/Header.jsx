@@ -5,15 +5,15 @@ import Links from "../Links";
 const Header = () => {
   return (
     <header className="w-full mb-24 mt-7 md:mt-24 ">
-      <h1 className="text-5xl   md:text-[140px] xl:text-[210px] font-semibold  md:font-medium  w-full text-center leading-tight sm:leading-snug md:leading-normal">
-        Coburg Care
+      <h1 className="text-5xl md:text-[140px] xl:text-[190px] font-semibold  md:font-medium  w-full text-center leading-tight sm:leading-snug md:leading-normal">
+        Cobourg Care
       </h1>
 
       <div className="flex flex-col-reverse lg:flex-row justify-between gap-8  ">
         <div className="flex items- w-full lg:w-1/2 md:mt-12">
           <div className="space-y-6 sm:space-y-8 md:space-y-10">
             <p className="text-base sm:text-lg md:text-lg text-center md:text-left opacity-50">
-              Accessible, Quality Healthcare for Coburg Families. We offer
+              Accessible, Quality Healthcare for Cobourg Families. We offer
               compassionate medical care and preventive health services tailored
               to your family's unique needs. Experience trusted healthcare in a
               welcoming environment.

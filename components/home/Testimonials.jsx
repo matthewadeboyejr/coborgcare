@@ -7,7 +7,7 @@ const Testimonials = () => {
   const reviews = [
     {
       quote:
-        "I was nervous about my procedure, but the team at coburg Clinic explained everything clearly and made sure I was comfortable every step of the way. I highly recommend them!",
+        "I was nervous about my procedure, but the team at Cobourg Clinic explained everything clearly and made sure I was comfortable every step of the way. I highly recommend them!",
       author: "Robert Johnson",
       role: "Patient",
       rating: 5,

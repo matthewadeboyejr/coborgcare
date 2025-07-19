@@ -1,5 +1,6 @@
 import Blog from "@/components/home/Blog";
 import AppointmentBooking from "@/components/home/bookingappointment/AppointmentBooking";
+import OceanBooking from "@/components/home/bookingappointment/OceanBooking";
 import ZohoBooking from "@/components/home/bookingappointment/ZohoBooking";
 import Footer from "@/components/home/Footer";
 import Header from "@/components/home/Header";
@@ -7,6 +8,7 @@ import Map from "@/components/home/Map";
 import MarqueeService from "@/components/home/MarqueeService";
 import OurDoctors from "@/components/home/OurDoctors";
 import OverView from "@/components/home/OverView";
+import Procedure from "@/components/home/Procedure";
 import RespectfulPolicy from "@/components/home/RespectfulPolicy";
 import Testimonials from "@/components/home/Testimonials";
 import Why from "@/components/home/Why";
@@ -19,11 +21,12 @@ export default function Home() {
       <MarqueeService />
       <OverView />
       <Why />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <OurDoctors />
-      <Blog />
+      {/* <Blog /> */}
       <MarqueeService />
-      <ZohoBooking />
+      <OceanBooking />
+      {/* <Procedure /> */}
       <RespectfulPolicy />
       <Map />
     </div>

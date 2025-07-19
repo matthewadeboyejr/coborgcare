@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/home/Footer";
 import NavBar from "@/components/NavBar";
+import Progress from "@/components/ProgressBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,8 +21,8 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Coborg Care Clincs",
-  description: "Accessible, Quality Healthcare for Coburg Families.",
+  title: "Cobourg Care Clinics",
+  description: "Accessible, Quality Healthcare for Cobourg Families.",
 };
 
 export default function RootLayout({ children }) {
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable}  antialiased   px-4 sm:px-6 md:px-12 lg:px-24 py-4 sm:py-6  `}
       >
         <NavBar />
+        <Progress />
         {children}
         <Footer />
       </body>

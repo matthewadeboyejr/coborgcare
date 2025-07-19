@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="flex md:flex-row flex-col md:items-center  gap-16 ">
         <div className="space-y-5 2/4 ">
           <h2 className="font-bold text-5xl text-[#0B95C7]">
-            Keeping Coburg Healthy – One Family at a Time.
+            Keeping Cobourg Healthy – One Family at a Time.
           </h2>
           <p className="text-white text-lg flex gap-5">
             <Link href="/" className=" hover:opacity-90 cursor-pointer">
@@ -23,7 +23,7 @@ export default function Footer() {
           </p>
           <div className="text-white space-y-2">
             <p>
-              Address: Unit 5A, 609 William Street Coburg, Ontario, K9A 3A6,
+              Address: Unit 5A, 609 William Street Cobourg, Ontario, K9A 3A6,
               Canada
             </p>
             <p>Opon: Mon - Sat 9:00AM - 6:00PM</p>
@@ -47,7 +47,9 @@ export default function Footer() {
             layout="responsive"
           />
         </div>
-        <span className="text-[#F2F2F2]/80 text-xs ">@ Coburg Care Clinic</span>
+        <span className="text-[#F2F2F2]/80 text-xs ">
+          @ Cobourg Care Clinic
+        </span>
       </div>
     </footer>
   );
@@ -60,13 +62,8 @@ export function FooterNavMobile() {
     {
       title: "Quick Link",
       links: [
-        { href: "/", label: "Book Now" },
-        { href: "/", label: "Contact us" },
-        { href: "/", label: "Address" },
-        { href: "/", label: "Graphic designer" },
-        { href: "/", label: "Video commercial director" },
-        { href: "/", label: "Brand strategist" },
-        { href: "/", label: "Digital marketer" },
+        { href: "/appointments", label: "Book Now" },
+        { href: "/contact-us", label: "Contact us" },
       ],
     },
     {
@@ -74,14 +71,12 @@ export function FooterNavMobile() {
       links: [
         { href: "/contact-us", label: "Help & support" },
         { href: "/#blog", label: "Blog" },
-        { href: "/", label: "Podcast" },
       ],
     },
     {
       title: "Company",
       links: [
         { href: "/about-us", label: "About Us" },
-        { href: "/contact-us", label: "Careers" },
         { href: "/policy", label: "Privacy policy" },
       ],
     },
@@ -148,23 +143,13 @@ export function FooterNavWeb() {
           <li className="cursor-pointer opacity-90">
             <Link href="/contact-us">Contact us</Link>
           </li>
-          <li className="cursor-pointer opacity-90">
-            <Link href="/">Address</Link>
-          </li>
         </ul>
       </div>
       <div className="text-white text-xs space-y-2">
         <p className="font-semibold  ">Resources</p>
         <ul className="space-y-3 font-medium">
           <li className="cursor-pointer opacity-90">
-            <Link href="/">Help & support</Link>
-          </li>
-
-          <li className="cursor-pointer opacity-90">
-            <Link href="/">Blog</Link>
-          </li>
-          <li className="cursor-pointer opacity-90">
-            <Link href="/">Podcast</Link>
+            <Link href="/contact-us">Help & support</Link>
           </li>
         </ul>
       </div>
@@ -174,11 +159,9 @@ export function FooterNavWeb() {
           <li className="cursor-pointer opacity-90">
             <Link href="/about-us">About Us</Link>
           </li>
+
           <li className="cursor-pointer opacity-90">
-            <Link href="/">Careers</Link>
-          </li>
-          <li className="cursor-pointer opacity-90">
-            <Link href="/">Privacy policy</Link>
+            <Link href="/policy ">Privacy policy</Link>
           </li>
         </ul>
       </div>

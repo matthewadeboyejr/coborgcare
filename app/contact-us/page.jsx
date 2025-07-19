@@ -87,10 +87,10 @@ const ContactUs = () => {
                 <div>
                   <h3 className="font-medium text-lg">Email</h3>
                   <a
-                    href="mailto:hello@coborgcarelinic.ca"
+                    href="mailto:hello@cobourgcarelinic.ca"
                     className="text-[#595959] hover:text-primary-color transition-colors"
                   >
-                    hello@coborgcarelinic.ca
+                    hello@cobourgcarelinic.ca
                   </a>
                 </div>
               </li>
@@ -131,7 +131,7 @@ const ContactUs = () => {
                   <p className="text-[#595959]">
                     Unit 5A, 609 William Street
                     <br />
-                    Coburg, Ontario, K9A 3A6
+                    Cobourg, Ontario, K9A 3A6
                     <br />
                     Canada
                   </p>

@@ -12,16 +12,16 @@ const OverView = () => {
         <div className="space-y-4 sm:space-y-6 w-full">
           <div className="flex md:block justify-center ">
             <p className=" bg-[#EDEEF1] flex justify-center text-[#0E31AC]  text-sm py-2 px-4 rounded-full w-fit">
-              Coburg Clinic
+              Cobourg Clinic
             </p>
           </div>
 
           <h2 className="text-3xl  lg:text-4xl font-semibold text-center md:text-left leading-tight">
-            Convenient, quality medical care in the heart of Coburg
+            Convenient, quality medical care in the heart of Cobourg
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-center md:text-left text-[#595959] max-w-[600px] mx-auto md:mx-0">
             We've been providing some of the best private medical care in
-            Coburg,canada for for years. Your health lies at the heart of
+            Cobourg,canada for for years. Your health lies at the heart of
             everything we do.
           </p>
           <div className="flex justify-center md:justify-start">

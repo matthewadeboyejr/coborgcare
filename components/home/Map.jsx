@@ -11,7 +11,7 @@ const Map = () => {
         loading="lazy"
         allowFullScreen
         referrerPolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD84BvnJGsGjKWLXVUHYJ1DidTvafy7cAw&q=Unit+5A,+609+William+Street,Coburg,Ontario,K9A+3A6,Canada"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD84BvnJGsGjKWLXVUHYJ1DidTvafy7cAw&q=Unit+5A,+609+William+Street,Cobourg,Ontario,K9A+3A6,Canada"
       ></iframe>
     </div>
   );

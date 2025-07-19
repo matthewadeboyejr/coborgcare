@@ -7,8 +7,8 @@ import Btn from "../Btn";
 const Why = () => {
   return (
     <section className="mb-24">
-      <h2 className="text-4xl  md:text-[140px] xl:text-[210px] font-semibold  md:font-medium mb-3 w-full text-center leading-tight sm:leading-snug md:leading-normal">
-        Why Coborg
+      <h2 className="text-4xl  md:text-[140px] xl:text-[180px] font-semibold  md:font-medium mb-3 w-full text-center leading-tight sm:leading-snug md:leading-normal">
+        Why Cobourg
       </h2>
       <section className="flex flex-col-reverse lg:flex-row justify-between gap-8 lg:gap-12 bg-[#EDEEF1] b-5 rounded-3xl">
         <div className="w-full lg:w-[50%]  ">
@@ -28,7 +28,7 @@ const Why = () => {
           <div className="space-y-4 sm:space-y-6 w-full">
             <div className="flex md:block justify-center ">
               <p className=" bg-white flex justify-center text-[#0E31AC]  text-sm py-2 px-4 rounded-full w-fit">
-                Coburg Clinic
+                Cobourg Clinic
               </p>
             </div>
             <h2 className="text-3xl  lg:text-4xl font-semibold text-center md:text-left leading-tight">

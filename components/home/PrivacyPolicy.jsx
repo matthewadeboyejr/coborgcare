@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
           <div className="space-y-4 sm:space-y-6 w-full px-4 sm:px-8 lg:px-0">
             <div className="flex md:block justify-center">
               <p className="bg-white flex justify-center text-[#0E31AC] text-sm py-2 px-4 rounded-full w-fit">
-                Coburg Care Clinic
+                Cobourg Care Clinic
               </p>
             </div>
             <h2 className="text-3xl lg:text-4xl font-semibold text-center md:text-left leading-tight">
