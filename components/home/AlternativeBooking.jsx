@@ -22,11 +22,11 @@ const AlternativeBooking = () => {
         {/* Text Content - Now takes 60% width on large screens */}
         <div className="flex items-center w-full lg:w-[50%] md:pr-10 px-5">
           <div className="space-y-4 sm:space-y-6 w-full">
-            <div className="flex md:block justify-center mt-5">
+            {/* <div className="flex md:block justify-center mt-5">
               <p className=" bg-[#EDEEF1] text-[#0E31AC]  text-sm py-2 px-4 rounded-full w-fit">
                 Experienced our online booking
               </p>
-            </div>
+            </div> */}
 
             <div>
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-center md:text-left leading-tight">

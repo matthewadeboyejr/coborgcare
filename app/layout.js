@@ -21,7 +21,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Cobourg Care Clinics",
+  title: "Cobourg Care Clinic",
   description: "Accessible, Quality Healthcare for Cobourg Families.",
 };
 
