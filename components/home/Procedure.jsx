@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FiLinkedin, FiTwitter } from "react-icons/fi";
 import Btn from "../Btn";
 import Links from "../Links";
+import BookingBtn from "./bookingappointment/BookingBtn";
 
 const Procedure = () => {
   return (
@@ -51,7 +52,7 @@ const Procedure = () => {
             </ul>
 
             <div className="flex justify-center md:justify-start">
-              <Links title={"Book Appointment Now"} action="/appointments" />
+              <BookingBtn />
             </div>
           </div>
         </div>

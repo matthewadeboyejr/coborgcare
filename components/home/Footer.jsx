@@ -26,7 +26,7 @@ export default function Footer() {
               Address: Unit 5A, 609 William Street Cobourg, Ontario, K9A 3A6,
               Canada
             </p>
-            <p>Opon: Mon - Sat 9:00AM - 6:00PM</p>
+            <p>Open: Mon-Fri 9:30AM - 5:00PM, Sat 10:00AM - 4:00PM</p>
             <p>Phone: 6475089094</p>
             <p>Fax: (905) 2917547</p>
           </div>

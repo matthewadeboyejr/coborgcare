@@ -3,6 +3,7 @@ import React from "react";
 import { RiHospitalFill } from "react-icons/ri";
 import Btn from "../Btn";
 import Links from "../Links";
+import BookingBtn from "./bookingappointment/BookingBtn";
 
 const OverView = () => {
   return (
@@ -25,7 +26,7 @@ const OverView = () => {
             everything we do.
           </p>
           <div className="flex justify-center md:justify-start">
-            <Links title={"Book Appointment Now"} action="/appointments" />
+            <BookingBtn />
           </div>
         </div>
       </div>
@@ -49,10 +50,11 @@ const OverView = () => {
                 <RiHospitalFill size={20} />
               </span>
               <h3 className="text-base sm:text-lg md:text-xl font-semibold">
-                24/7 services
+                Premium Services
               </h3>
               <p className="text-xs sm:text-sm text-[#595959]">
-                Open 7 days a week, weekends & evenings, most holidays.
+                We offer a wide range of services to meet your needs. We are
+                here to help you.
               </p>
             </div>
           </div>
@@ -66,10 +68,11 @@ const OverView = () => {
                 <RiHospitalFill size={20} />
               </span>
               <h3 className="text-base sm:text-lg md:text-xl font-semibold">
-                Walk-in Clinic
+                Convenient Location
               </h3>
               <p className="text-xs sm:text-sm text-[#595959]">
-                Immediate medical attention for urgent health concerns.
+                We are located in the heart of Cobourg, we are easily accessible
+                from all parts of the town.
               </p>
             </div>
           </div>

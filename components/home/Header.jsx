@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Links from "../Links";
+import BookingBtn from "./bookingappointment/BookingBtn";
 
 const Header = () => {
   return (
@@ -19,7 +19,7 @@ const Header = () => {
               welcoming environment.
             </p>
             <div className="md:justify-start w-full hidden md:flex">
-              <Links title={"Book Now"} action={"/appointments"} />
+              <BookingBtn />
             </div>
           </div>
         </div>

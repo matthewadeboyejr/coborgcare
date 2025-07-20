@@ -1,5 +1,8 @@
 import Btn from "@/components/Btn";
+import BookingBtn from "@/components/home/bookingappointment/BookingBtn";
+import SafariBooking from "@/components/home/bookingappointment/SafariBooking";
 import Links from "@/components/Links";
+import useBrowser from "@/hook/usebrowser";
 import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
@@ -11,6 +14,7 @@ import { TbHealthRecognition } from "react-icons/tb";
 import { VscDebugContinue } from "react-icons/vsc";
 
 const About = () => {
+  const { isSafari } = useBrowser();
   return (
     <div>
       <section className="flex flex-col-reverse lg:flex-row justify-between gap-8 lg:gap-12 mt-24 mb-">
@@ -36,7 +40,7 @@ const About = () => {
               environment.
             </p>
             <div className="flex justify-center md:justify-start">
-              <Links title={"Book Appointment Now"} action="/appointments" />
+              <BookingBtn />
             </div>
           </div>
         </div>
@@ -262,7 +266,7 @@ const About = () => {
 
               {/* CTA Button */}
               <div className="flex justify-center md:justify-start pt-4">
-                <Links title={"Book Appointment Now"} action="/appointments" />
+                <BookingBtn />
               </div>
             </div>
           </div>

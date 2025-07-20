@@ -3,9 +3,8 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { RiMenuLine, RiCloseLine } from "react-icons/ri";
-import Btn from "./Btn";
 import Image from "next/image";
-import Links from "./Links";
+import BookingBtn from "./home/bookingappointment/BookingBtn";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,7 +38,7 @@ const NavBar = () => {
           ))}
         </ul>
         <div>
-          <Links title={"Book Appointment Now"} action="/appointments" />
+          <BookingBtn />
         </div>
       </nav>
 
@@ -86,9 +85,7 @@ const NavBar = () => {
             ))}
           </ul>
           <div className="mt-12 text-center">
-            <button className="bg-primary-color px-8 py-4 rounded-full text-white hover:bg-[#0a2477] transition-colors duration-300 text-lg font-medium">
-              Book Appointment
-            </button>
+            <BookingBtn />
           </div>
         </div>
       </div>
@@ -99,7 +96,6 @@ const NavBar = () => {
 // Navigation items data
 const navItems = [
   { name: "Home", href: "/" },
-  /* { name: "Services", href: "/services" }, */
   { name: "Doctors", href: "/doctors" },
   { name: "Appointments", href: "/appointments" },
   { name: "Contact", href: "/contact-us" },
