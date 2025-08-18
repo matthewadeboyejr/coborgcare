@@ -4,6 +4,7 @@ import OceanBooking from "@/components/home/bookingappointment/OceanBooking";
 import ZohoBooking from "@/components/home/bookingappointment/ZohoBooking";
 import Footer from "@/components/home/Footer";
 import Header from "@/components/home/Header";
+import Kiosks from "@/components/home/kiosks";
 import Map from "@/components/home/Map";
 import MarqueeService from "@/components/home/MarqueeService";
 import OurDoctors from "@/components/home/OurDoctors";
@@ -26,6 +27,7 @@ export default function Home() {
       {/* <Blog /> */}
       <MarqueeService />
       <OceanBooking />
+      <Kiosks />
       {/* <Procedure /> */}
       <RespectfulPolicy />
       <Map />
