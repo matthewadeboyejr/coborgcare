@@ -9,6 +9,7 @@ import Map from "@/components/home/Map";
 import MarqueeService from "@/components/home/MarqueeService";
 import OurDoctors from "@/components/home/OurDoctors";
 import OverView from "@/components/home/OverView";
+import PictureGallary from "@/components/home/PictureGallary";
 import Procedure from "@/components/home/Procedure";
 import RespectfulPolicy from "@/components/home/RespectfulPolicy";
 import Testimonials from "@/components/home/Testimonials";
@@ -28,6 +29,7 @@ export default function Home() {
       <MarqueeService />
       <OceanBooking />
       <Kiosks />
+      <PictureGallary />
       {/* <Procedure /> */}
       <RespectfulPolicy />
       <Map />

@@ -1,4 +1,5 @@
 import BookingBtn from "@/components/home/bookingappointment/BookingBtn";
+import PictureGallery from "@/components/home/PictureGallary";
 import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
@@ -265,6 +266,7 @@ const About = () => {
           </div>
         </section>
       </div>
+      <PictureGallery />
     </div>
   );
 };
