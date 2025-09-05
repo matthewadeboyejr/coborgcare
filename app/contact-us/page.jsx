@@ -87,10 +87,10 @@ const ContactUs = () => {
                 <div>
                   <h3 className="font-medium text-lg">Email</h3>
                   <a
-                    href="mailto:hello@cobourgcarelinic.ca"
+                    href="mailto:cobourgcareclinic@gmail.com"
                     className="text-[#595959] hover:text-primary-color transition-colors"
                   >
-                    hello@cobourgcarelinic.ca
+                    cobourgcareclinic@gmail.com
                   </a>
                 </div>
               </li>

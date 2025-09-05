@@ -4,6 +4,7 @@ import OceanBooking from "@/components/home/bookingappointment/OceanBooking";
 import ZohoBooking from "@/components/home/bookingappointment/ZohoBooking";
 import Footer from "@/components/home/Footer";
 import Header from "@/components/home/Header";
+import IntroVideo from "@/components/home/IntroVideo";
 import Kiosks from "@/components/home/kiosks";
 import Map from "@/components/home/Map";
 import MarqueeService from "@/components/home/MarqueeService";
@@ -20,6 +21,7 @@ export default function Home() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)] ">
       <Header />
+      <IntroVideo />
       <MarqueeService />
       <OverView />
       <Why />
