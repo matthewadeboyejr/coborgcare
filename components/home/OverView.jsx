@@ -21,9 +21,8 @@ const OverView = () => {
             Convenient, quality medical care in the heart of Cobourg
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-center md:text-left text-[#595959] max-w-[600px] mx-auto md:mx-0">
-            We've been providing some of the best private medical care in
-            Cobourg,canada for for years. Your health lies at the heart of
-            everything we do.
+            We provide one of the best holistic care in Cobourg,Canada for for
+            years. Your health lies at the heart of everything we do.
           </p>
           <div className="flex justify-center md:justify-start">
             <BookingBtn />
