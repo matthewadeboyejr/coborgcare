@@ -3,6 +3,7 @@ import { MdOutlineHealthAndSafety } from "react-icons/md";
 import { SlBadge } from "react-icons/sl";
 import { TbHealthRecognition } from "react-icons/tb";
 import Btn from "../Btn";
+import BookingBtn from "./bookingappointment/BookingBtn";
 
 const Why = () => {
   return (
@@ -54,7 +55,7 @@ const Why = () => {
               <span className="font-semibold">In-Person/Walk-in</span>
             </p>
             <div className="flex justify-center md:justify-start">
-              <Btn title={"Talk to someone"} />
+              <BookingBtn title="Talk to someone" />
             </div>
           </div>
         </div>

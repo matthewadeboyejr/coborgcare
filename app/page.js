@@ -1,5 +1,6 @@
 import Blog from "@/components/home/Blog";
 import AppointmentBooking from "@/components/home/bookingappointment/AppointmentBooking";
+import AppointmentChoice from "@/components/home/bookingappointment/AppointmentChoice";
 import OceanBooking from "@/components/home/bookingappointment/OceanBooking";
 import ZohoBooking from "@/components/home/bookingappointment/ZohoBooking";
 import Footer from "@/components/home/Footer";
@@ -29,7 +30,7 @@ export default function Home() {
       <OurDoctors />
       {/* <Blog /> */}
       <MarqueeService />
-      <OceanBooking />
+      <AppointmentChoice />
       <Kiosks />
       <PictureGallary />
       {/* <Procedure /> */}
