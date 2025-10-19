@@ -3,6 +3,7 @@ import AppointmentBooking from "@/components/home/bookingappointment/Appointment
 import AppointmentChoice from "@/components/home/bookingappointment/AppointmentChoice";
 import OceanBooking from "@/components/home/bookingappointment/OceanBooking";
 import ZohoBooking from "@/components/home/bookingappointment/ZohoBooking";
+import FluVaccine from "@/components/home/FluVaccine";
 import Footer from "@/components/home/Footer";
 import Header from "@/components/home/Header";
 import IntroVideo from "@/components/home/IntroVideo";
@@ -26,7 +27,8 @@ export default function Home() {
       <OverView />
       <IntroVideo />
       <Why />
-      {/* <Testimonials /> */}
+      <FluVaccine />
+      <Testimonials />
       <OurDoctors />
       {/* <Blog /> */}
       <MarqueeService />

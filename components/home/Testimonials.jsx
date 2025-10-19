@@ -7,15 +7,15 @@ const Testimonials = () => {
   const reviews = [
     {
       quote:
-        "I was nervous about my procedure, but the team at Cobourg Clinic explained everything clearly and made sure I was comfortable every step of the way. I highly recommend them!",
-      author: "Robert Johnson",
+        "Always an excellent experience visiting Dr Usman and team, he listens to you with full intent of helping as much as he can within his reach and beyond.Thank you for the wonderful service you provide. We need more doctors like you who can help patients in need",
+      author: "Ripshu Gupta",
       role: "Patient",
       rating: 5,
     },
     {
       quote:
-        "The level of professionalism and compassion I experienced was outstanding. They truly prioritize patient well-being, and I felt like I was in excellent hands.",
-      author: "Sarah Williams",
+        "The staff members are all very friendly and helpful. Dr Usman took time and care to address a health concern I had. He listened, provided a thorough assessment and clearly answered all of my questions.",
+      author: "Lisa McGrimmon",
       role: "Patient",
       rating: 5,
     },
@@ -28,22 +28,22 @@ const Testimonials = () => {
     },
     {
       quote:
-        "From the moment I walked in, I felt welcomed and well cared for. The doctors and nurses were incredibly attentive, and I'm so grateful for their expertise.",
-      author: "Emily Davis",
+        "I went in today to help my elderly friend understand the workings of this clinic. Everyone was helpful and kind. A very successful visit.",
+      author: "Julie Gamblin",
       role: "Patient",
       rating: 5,
     },
     {
       quote:
-        "My doctor offered me a very effective treatment and I really did feel significant improvement really soon. I followed all the prescriptions and now I feel great. Greatly thankful to all the staff, and I would definitely recommend",
-      author: "David Wilson",
+        "From beginning to end, I was truly grateful for the care and environment provided at Cobourg Care Clinic. Dr. Usman and the staff were incredibly friendly, warm, and thorough. Their professionalism and genuine concern made a difficult situation much more comfortable. I sincerely appreciate the exceptional level of care I received and would highly recommend this clinic to anyone in need.",
+      author: "Being Her",
       role: "Patient",
       rating: 5,
     },
     {
       quote:
-        "Fantastic service and really helpful and caring personnel. I was impressed by pleasant atmosphere and the general assistance. My doctor offered me a very effective treatment and I really did feel significant improvement really soon. I followed all the prescriptions and now I feel great. Greatly thankful to all the staff, and I would definitely recommend this medical center to anyone who medic aid.",
-      author: "Jennifer Lee",
+        "Dr. Usman and his staff were very friendly and welcoming. Dr. Usman was kind, gentle and thorough in his exam of my symptoms. My family and I are thankful for his clinic as we were without a dr before him. Thank you Dr. Usman!",
+      author: "Shelley Giroux",
       role: "Patient",
       rating: 5,
     },
