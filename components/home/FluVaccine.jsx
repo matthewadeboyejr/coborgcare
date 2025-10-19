@@ -11,7 +11,7 @@ const FluVaccine = () => {
       <h2 className="text-4xl  md:text-[140px] xl:text-[180px] font-semibold  md:font-medium mb-3 w-full text-center leading-tight sm:leading-snug md:leading-normal">
         Flu Vaccines
       </h2>
-      <section className="flex flex-col-reverse lg:flex-row justify-between gap-8 lg:gap-12 bg-[#EDEEF1] b-5 rounded-3xl">
+      <section className="flex flex-col-reverse lg:flex-row justify-between gap-8 lg:gap-12 bg-[#0046B7]/15g b-5 rounded-3xl">
         <div className="w-full lg:w-[50%]  ">
           <div className="relative w-full aspect-square max-w-full overflow-hidden rounded-xl sm:rounded-2xl order-1 sm:order-2">
             <Image
@@ -25,7 +25,7 @@ const FluVaccine = () => {
         </div>
 
         {/* Text Content - Now takes 60% width on large screens */}
-        <div className="flex items-center  w-full lg:w-[50%] pr-10">
+        <div className="flex items-center  w-full lg:w-[50%] pr-10 ">
           <div className="space-y-4 sm:space-y-6 w-full">
             <div className="flex md:block justify-center ">
               <p className=" bg-white flex justify-center text-[#0E31AC]  text-sm py-2 px-4 rounded-full w-fit">
