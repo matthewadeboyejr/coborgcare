@@ -64,7 +64,7 @@ const AppointmentChoice = () => {
       {/* Doctors Section */}
       <div className="space-y-8 md:space-y-0 flex flex-col md:flex-row items-stretch justify-center gap-8 h-full">
         {/* Dr. Paul Edokpayi */}
-        <section className="rounded-3xl bg-[#0B95C7]/10 p-6 w-full md:w-1/2 md:h-[500px] flex flex-col">
+        <section className="rounded-3xl bg-[#0B95C7]/10 p-6 w-full md:w-1/2 md:h-[600px] flex flex-col">
           <div className="space-y-4 sm:space-y-6 flex-1">
             <div className="flex justify-center">
               <p className="bg-[#EDEEF1] text-[#0E31AC] text-sm py-2 px-4 rounded-full w-fit">
@@ -106,7 +106,7 @@ const AppointmentChoice = () => {
         </section>
 
         {/* Dr. Usman */}
-        <section className="rounded-3xl bg-[#0B95C7]/10 p-6 w-full md:w-1/2 md:h-[500px] flex flex-col">
+        <section className="rounded-3xl bg-[#0B95C7]/10 p-6 w-full md:w-1/2 md:h-[600px] flex flex-col">
           <div className="space-y-4 sm:space-y-6 flex-1">
             <div className="flex justify-center">
               <p className="bg-[#EDEEF1] text-[#0E31AC] text-sm py-2 px-4 rounded-full w-fit">
@@ -147,6 +147,51 @@ const AppointmentChoice = () => {
             <SafariBooking
               title="Book with Dr. Isah"
               action="https://ocean.cognisantmd.com/online-booking/e98fec3a-48b6-4f68-a13a-b22d9af268bc"
+            />
+          </div>
+        </section>
+        {/* Dr. Mario */}
+        <section className="rounded-3xl bg-[#0B95C7]/10 p-6 w-full md:w-1/2 md:h-[600px] flex flex-col">
+          <div className="space-y-4 sm:space-y-6 flex-1">
+            <div className="flex justify-center">
+              <p className="bg-[#EDEEF1] text-[#0E31AC] text-sm py-2 px-4 rounded-full w-fit">
+                Experienced Family Physician
+              </p>
+            </div>
+
+            <div className="">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-2">
+                Dr. Mario
+              </h3>
+              <p className="text-sm sm:text-base md:text-lg text-[#595959] mb-4">
+                Experienced Family physician with over a decade of experience
+              </p>
+            </div>
+
+            <div className="space-y-2">
+              <h4 className="text-lg font-medium text-[#0E31AC] ">
+                Available Services:
+              </h4>
+              <ul className="text-sm sm:text-base text-[#595959] space-y-1 ">
+                <li>• General Consultations</li>
+                <li>• Health Check-ups</li>
+                <li>• Chronic Disease Management</li>
+                <li>• Preventive Care</li>
+                <li>• Family Medicine</li>
+              </ul>
+              <div className="mt-4 p-3 bg-amber-50 border-l-4 border-amber-400 rounded">
+                <p className="text-xs text-amber-800">
+                  <strong>Note:</strong>
+                  Dr. Mario attends to all other medical stuff except
+                  venepuncture, and seasonal vaccines
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-center mt-auto">
+            <SafariBooking
+              title="Book with Dr. Mario"
+              action="https://ocean.cognisantmd.com/online-booking/79bc4a4e-943d-4c72-be29-fda6b4e1fb9d"
             />
           </div>
         </section>
