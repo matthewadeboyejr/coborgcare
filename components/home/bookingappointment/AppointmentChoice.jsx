@@ -54,7 +54,7 @@ const AppointmentChoice = () => {
                 All Other Medical Services
               </h4>
               <p className="text-[#595959]">
-                Please book under <strong>( Dr. Isah)</strong>.
+                Please book under <strong>Dr. Isah or Dr. Mario</strong>.
               </p>
             </div>
           </div>
@@ -164,7 +164,7 @@ const AppointmentChoice = () => {
                 Dr. Mario
               </h3>
               <p className="text-sm sm:text-base md:text-lg text-[#595959] mb-4">
-                Experienced Family physician with over a decade of experience
+                Experienced Family physician
               </p>
             </div>
 

@@ -20,8 +20,7 @@ const OurDoctors = () => {
       id: 2,
       name: "Dr. Mario Kangeswaren",
       image: "/drmario.jpeg",
-      description:
-        "Experienced Family physician with over a decade years of experience",
+      description: "Experienced Family physician",
       link: "",
       twitter: "",
     },
