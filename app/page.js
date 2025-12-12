@@ -1,10 +1,5 @@
-import Blog from "@/components/home/Blog";
-import AppointmentBooking from "@/components/home/bookingappointment/AppointmentBooking";
 import AppointmentChoice from "@/components/home/bookingappointment/AppointmentChoice";
-import OceanBooking from "@/components/home/bookingappointment/OceanBooking";
-import ZohoBooking from "@/components/home/bookingappointment/ZohoBooking";
 import FluVaccine from "@/components/home/FluVaccine";
-import Footer from "@/components/home/Footer";
 import Header from "@/components/home/Header";
 import IntroVideo from "@/components/home/IntroVideo";
 import Kiosks from "@/components/home/kiosks";
@@ -13,11 +8,11 @@ import MarqueeService from "@/components/home/MarqueeService";
 import OurDoctors from "@/components/home/OurDoctors";
 import OverView from "@/components/home/OverView";
 import PictureGallary from "@/components/home/PictureGallary";
-import Procedure from "@/components/home/Procedure";
 import RespectfulPolicy from "@/components/home/RespectfulPolicy";
 import Testimonials from "@/components/home/Testimonials";
 import Why from "@/components/home/Why";
-import NavBar from "@/components/NavBar";
+
+import HolidayNotice from "@/components/HolidayNotice";
 
 export default function Home() {
   return (
@@ -32,6 +27,7 @@ export default function Home() {
       <OurDoctors />
       {/* <Blog /> */}
       <MarqueeService />
+      <HolidayNotice />
       <AppointmentChoice />
       <Kiosks />
       <PictureGallary />

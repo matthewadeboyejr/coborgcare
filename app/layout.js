@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/home/Footer";
 import NavBar from "@/components/NavBar";
 import Progress from "@/components/ProgressBar";
+import HolidayNotice from "@/components/HolidayNotice";
 import Script from "next/script";
 
 const geistSans = Geist({
@@ -66,6 +67,7 @@ export default function RootLayout({ children }) {
           />
         </noscript>
         <NavBar />
+        <HolidayNotice />
         <Progress />
         {children}
         <Footer />
