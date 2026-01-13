@@ -16,14 +16,6 @@ const OurDoctors = () => {
       twitter:
         "https://www.linkedin.com/in/isah-usman-651991131/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
-    {
-      id: 2,
-      name: "Dr. Mario Kangeswaren",
-      image: "/drmario.jpeg",
-      description: "Experienced Family physician",
-      link: "",
-      twitter: "",
-    },
   ];
   return (
     <div className="mb-24 grid grid-cols-1 md:grid-cols-2 gap-8">
