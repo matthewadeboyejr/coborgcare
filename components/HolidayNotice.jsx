@@ -33,6 +33,10 @@ const HolidayNotice = () => {
               For appointments, please book with <strong>Dr. Isah Usman</strong>{" "}
               or <strong>Dr. Paul</strong>.
             </span>
+            <span className="block mt-4 pt-2 border-t border-white/20">
+              <strong className="text-yellow-300">Family Days:</strong> We
+              will be closed on the 14th and 16th of February.
+            </span>
           </p>
         </div>
       </div>
