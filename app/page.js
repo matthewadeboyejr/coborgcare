@@ -10,9 +10,10 @@ import OverView from "@/components/home/OverView";
 import PictureGallary from "@/components/home/PictureGallary";
 import RespectfulPolicy from "@/components/home/RespectfulPolicy";
 import Testimonials from "@/components/home/Testimonials";
+import Tests from "@/components/home/Tests";
 import Why from "@/components/home/Why";
 
-import HolidayNotice from "@/components/HolidayNotice";
+import Notice from "@/components/Notice";
 
 export default function Home() {
   return (
@@ -23,11 +24,12 @@ export default function Home() {
       <IntroVideo />
       <Why />
       <FluVaccine />
+      <Tests />
       <Testimonials />
       <OurDoctors />
       {/* <Blog /> */}
       <MarqueeService />
-      <HolidayNotice />
+      <Notice />
       <AppointmentChoice />
       <Kiosks />
       <PictureGallary />

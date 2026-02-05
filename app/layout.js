@@ -3,7 +3,7 @@ import "./globals.css";
 import Footer from "@/components/home/Footer";
 import NavBar from "@/components/NavBar";
 import Progress from "@/components/ProgressBar";
-import HolidayNotice from "@/components/HolidayNotice";
+import Notice from "@/components/Notice";
 import FamilyDayPopup from "@/components/FamilyDayPopup";
 import Script from "next/script";
 
@@ -69,7 +69,7 @@ export default function RootLayout({ children }) {
         </noscript>
         <NavBar />
         <FamilyDayPopup />
-        <HolidayNotice />
+        <Notice />
         <Progress />
         {children}
         <Footer />

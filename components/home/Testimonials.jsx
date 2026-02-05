@@ -47,6 +47,55 @@ const Testimonials = () => {
       role: "Patient",
       rating: 5,
     },
+    {
+      quote:
+        "Dr. Usman is the best doctor my husband and I have ever seen. He’s compassionate and kind, never makes us feel like a burden and is never dismissive. So glad we found him :)",
+      author: "A Scott",
+      role: "Patient",
+      rating: 5,
+    },
+    {
+      quote:
+        "I did not find Terri particukarlybdusrespectful OR rude. Dr Usman was excellent and demionstrated hiscincern with my meducal problem... ie the reason I was there. Only criticism I would make is the sign in process usung one if the two modems. But Ibrequested Terris help and she cheerfully privioded it. I was more than appreciative to be anle to find this cli ic on a messy sniwy day in January. David",
+      author: "David Laycock",
+      role: "Patient",
+      rating: 5,
+    },
+    {
+      quote:
+        "I have had such great experiences here! Makda and Dr. Usman are super helpful and kind! Highly recommend!",
+      author: "Dakota Xavier",
+      role: "Patient",
+      rating: 5,
+    },
+    {
+      quote:
+        "I can’t say enough good things about this doctor’s office. From the front desk staff to the medical team, everyone is kind, professional, and truly caring. I always feel listened to and never rushed. It’s such a comfort knowing I’m in good hands here. Highly recommend!",
+      author: "Jennifer Sedore",
+      role: "Patient",
+      rating: 5,
+    },
+    {
+      quote:
+        "Maki the receptionist is so amazing and so kind. Dr Isah Usman is the best doctor. He’s very kind and helpful and will listen to you. I totally recommend the Cobourg care clinic thank you guys for all of your help!!!",
+      author: "Nikita Buzzell",
+      role: "Patient",
+      rating: 5,
+    },
+    {
+      quote:
+        "Amazing clinic! Dr. Usman has been so good to me and has already helped me so much in the short time i’ve been seeing him. All of the staff are friendly and helpful! i would definitely recommend Cobourg Care Clinic!Thank you so much",
+      author: "Jaden",
+      role: "Patient",
+      rating: 5,
+    },
+    {
+      quote:
+        "The staff is exceptional and the welcoming environment is outstanding. Their attention to detail is remarkable, as evidenced by the birthday card they handed me on my birthday. Additionally, their expertise is swift and accurate, diagnosing the problem promptly and providing solutions in the same building, including bloodwork and other analyses. I highly recommend this clinic as an efficient, quick and overall wonderful place to visit for a walk-in appointment.",
+      author: "Paul Brydson",
+      role: "Patient",
+      rating: 5,
+    },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -101,9 +150,8 @@ const Testimonials = () => {
                   {[...Array(5)].map((_, i) => (
                     <FaStar
                       key={i}
-                      className={`text-lg ${
-                        i < review.rating ? "text-yellow-400" : "text-gray-300"
-                      }`}
+                      className={`text-lg ${i < review.rating ? "text-yellow-400" : "text-gray-300"
+                        }`}
                     />
                   ))}
                 </div>
@@ -118,6 +166,10 @@ const Testimonials = () => {
             </motion.div>
           ))}
         </div>
+        <div className="flex justify-center">
+          <a href="https://g.page/r/CXqL8ZuO08TnEAE/review" className="bg-[#0E31AC] text-white px-10 py-4 rounded-full">Read More</a>
+        </div>
+
 
         {/* Navigation Dots */}
         <motion.div
@@ -130,9 +182,8 @@ const Testimonials = () => {
             <button
               key={index}
               onClick={() => handleDotClick(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === activeIndex ? "bg-blue-600 w-6" : "bg-gray-300"
-              }`}
+              className={`w-3 h-3 rounded-full transition-colors ${index === activeIndex ? "bg-blue-600 w-6" : "bg-gray-300"
+                }`}
               aria-label={`Go to review set ${index + 1}`}
             />
           ))}
