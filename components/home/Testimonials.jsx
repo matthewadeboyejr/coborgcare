@@ -131,7 +131,7 @@ const Testimonials = () => {
       <h2 className="text-5xl  md:text-[140px] xl:text-[210px] font-semibold md:font-medium w-full text-center leading-tight sm:leading-snug md:leading-normal">
         Testimonials
       </h2>
-      <AppreciationSection />
+      {/* <AppreciationSection /> */}
       <div className="max-w-7xl mx-auto">
         {/* Review Cards Container */}
         <div
