@@ -8,7 +8,7 @@ import BookingBtn from "./bookingappointment/BookingBtn";
 const Tests = () => {
   return (
     <section className="mb-24 bg-[#32BBF8] rounded-4xl p-5">
-      <h2 className="text-3xl  md:text-[100px] xl:text-[140px] font-semibold  md:font-medium mb-3 w-full text-center leading-tight sm:leading-snug md:leading-normal">
+      <h2 className="text-2xl  md:text-[50px] xl:text-[100px] font-semibold  md:font-medium mb-3 w-full text-center leading-tight sm:leading-snug md:leading-normal">
         TB Test & Immunisation
       </h2>
       <section className="flex flex-col-reverse lg:flex-row justify-between gap-8 lg:gap-12 bg-[#0046B7]/15g b-5 rounded-3xl">

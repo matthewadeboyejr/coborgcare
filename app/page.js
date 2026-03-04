@@ -1,5 +1,6 @@
 import AppointmentChoice from "@/components/home/bookingappointment/AppointmentChoice";
 import FluVaccine from "@/components/home/FluVaccine";
+import PreventiveHealthReminders from "@/components/home/PreventiveHealthReminders";
 import Header from "@/components/home/Header";
 import IntroVideo from "@/components/home/IntroVideo";
 import Kiosks from "@/components/home/kiosks";
@@ -24,12 +25,13 @@ export default function Home() {
       <IntroVideo />
       <Why />
       <FluVaccine />
+      <PreventiveHealthReminders />
       <Tests />
       <Testimonials />
       <OurDoctors />
       {/* <Blog /> */}
       <MarqueeService />
-      <Notice />
+      {/*     <Notice /> */}
       <AppointmentChoice />
       <Kiosks />
       <PictureGallary />

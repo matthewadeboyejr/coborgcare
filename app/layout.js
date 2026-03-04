@@ -4,7 +4,7 @@ import Footer from "@/components/home/Footer";
 import NavBar from "@/components/NavBar";
 import Progress from "@/components/ProgressBar";
 import Notice from "@/components/Notice";
-import FamilyDayPopup from "@/components/FamilyDayPopup";
+import PreventiveHealthPopup from "@/components/FamilyDayPopup";
 import Script from "next/script";
 
 const geistSans = Geist({
@@ -18,8 +18,35 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Cobourg Care Clinic",
-  description: "Accessible, Quality Healthcare for Cobourg Families.",
+  metadataBase: new URL("https://www.cobourgcareclinic.ca"),
+  title: {
+    default: "Cobourg Care Clinic | Family Healthcare in Cobourg, Ontario",
+    template: "%s | Cobourg Care Clinic",
+  },
+  description:
+    "Accessible, quality healthcare for Cobourg families. We offer compassionate medical care, preventive health screenings, immunizations, walk-in appointments, and chronic disease management.",
+  keywords: [
+    "Cobourg clinic",
+    "family doctor Cobourg",
+    "walk-in clinic Cobourg",
+    "healthcare Cobourg Ontario",
+    "preventive health screenings",
+    "immunizations Cobourg",
+    "flu vaccine Cobourg",
+    "Cobourg Care Clinic",
+  ],
+  openGraph: {
+    title: "Cobourg Care Clinic | Family Healthcare in Cobourg, Ontario",
+    description:
+      "Accessible, quality healthcare for Cobourg families. Book appointments for preventive screenings, immunizations, and general consultations.",
+    url: "https://www.cobourgcareclinic.ca",
+    siteName: "Cobourg Care Clinic",
+    locale: "en_CA",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://www.cobourgcareclinic.ca",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -68,8 +95,8 @@ export default function RootLayout({ children }) {
           />
         </noscript>
         <NavBar />
-        <FamilyDayPopup />
-        <Notice />
+        <PreventiveHealthPopup />
+        {/* <Notice /> */}
         <Progress />
         {children}
         <Footer />
