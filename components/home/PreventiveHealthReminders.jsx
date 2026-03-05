@@ -9,7 +9,7 @@ import {
     MdBloodtype,
 } from "react-icons/md";
 import { TbStethoscope } from "react-icons/tb";
-import { FaRibbon } from "react-icons/fa6";
+import { FaRibbon, FaHeartPulse } from "react-icons/fa6";
 import BookingBtn from "./bookingappointment/BookingBtn";
 
 const reminders = [
@@ -50,9 +50,9 @@ const reminders = [
         id: "blood-pressure",
         icon: MdMonitorHeart,
         title: "Blood Pressure & Cholesterol",
-        audience: "Adults 18+",
+        audience: "Adults 40+ (essential)",
         description:
-            "Regular cardiovascular checks help prevent heart disease and stroke. Know your numbers — schedule a check-up.",
+            "If you're over 40, regular blood pressure and cholesterol checks are essential to prevent heart disease and stroke. Know your numbers — schedule a check-up.",
         gradient: "from-red-500 to-orange-400",
         bgColor: "bg-red-50",
         iconColor: "text-red-600",
@@ -106,10 +106,41 @@ const PreventiveHealthReminders = () => {
             <h2 className="text-4xl md:text-[100px] xl:text-[140px] font-semibold md:font-medium mb-3 w-full text-center leading-tight sm:leading-snug md:leading-normal">
                 Preventive Health
             </h2>
-            <p className="text-center text-base sm:text-lg md:text-xl text-[#595959] max-w-3xl mx-auto mb-12 px-4">
+            <p className="text-center text-base sm:text-lg md:text-xl text-[#595959] max-w-3xl mx-auto mb-8 px-4">
                 Staying on top of preventive screenings is one of the best things you
                 can do for your health. Are you due for any of these?
             </p>
+
+            {/* Over 40 Banner */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="max-w-3xl mx-auto mb-12 px-4"
+            >
+                <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#0E31AC] to-[#0B95C7] p-5 sm:p-6 text-white shadow-lg">
+                    <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl" />
+                    <div className="relative z-10 flex items-start gap-4">
+                        <div className="p-2.5 bg-white/20 rounded-xl shrink-0 mt-0.5">
+                            <FaHeartPulse className="text-2xl" />
+                        </div>
+                        <div>
+                            <h3 className="text-lg sm:text-xl font-bold mb-1">
+                                Over 40? These checks are for you.
+                            </h3>
+                            <p className="text-blue-100 text-sm sm:text-base leading-relaxed">
+                                Adults over 40 are recommended to regularly check their
+                                <strong className="text-white"> cholesterol</strong>,
+                                <strong className="text-white"> blood pressure</strong>,
+                                <strong className="text-white"> prostate health</strong> (men), and
+                                <strong className="text-white"> blood glucose levels</strong>.
+                                Early detection is key — book your preventive check-up today.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </motion.div>
 
             {/* Cards Grid */}
             <motion.div

@@ -106,6 +106,21 @@ const PreventiveHealthPopup = () => {
                                 })}
                             </div>
 
+                            {/* Over 40 Tip */}
+                            <div className="mb-6 p-4 rounded-xl bg-gradient-to-r from-[#0E31AC]/10 to-[#0B95C7]/10 border border-[#0E31AC]/20">
+                                <p className="text-sm font-bold text-[#0E31AC] mb-1">
+                                    Over 40?
+                                </p>
+                                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                                    Adults 40+ should regularly check their{" "}
+                                    <strong>cholesterol</strong>,{" "}
+                                    <strong>blood pressure</strong>,{" "}
+                                    <strong>prostate health</strong> (men), and{" "}
+                                    <strong>blood glucose</strong>.
+                                    Early detection is key!
+                                </p>
+                            </div>
+
                             {/* CTA Buttons */}
                             <div className="space-y-3">
                                 <Link
