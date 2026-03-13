@@ -12,7 +12,7 @@ const CareersPage = () => {
         <div className="space-y-24">
             {/* Hero Section */}
             <section className="text-center space-y-6 max-w-4xl mx-auto px-4">
-                <motion.h1 
+                <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
@@ -20,7 +20,7 @@ const CareersPage = () => {
                 >
                     Join Our <span className="text-[#0B95C7]">Team</span>
                 </motion.h1>
-                <motion.p 
+                <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
@@ -39,11 +39,11 @@ const CareersPage = () => {
                                 <MdWorkOutline className="text-lg" />
                                 <span>Immediate Opening</span>
                             </div>
-                            
+
                             <h2 className="text-3xl md:text-5xl font-bold">Family <span className="text-[#0B95C7]">Physician</span></h2>
-                            
+
                             <p className="text-gray-600 text-lg leading-relaxed">
-                                We are seeking a passionate Family Physician to join our rostered clinic. At Cobourg Care, you'll find a supportive environment, modern facilities, and a dedicated patient population.
+                                We are seeking a passionate Family Physician to join our family practice. At Cobourg Care, you'll find a supportive environment, modern facilities, and a dedicated patient population.
                             </p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -53,7 +53,11 @@ const CareersPage = () => {
                                     "Competitive Compensation",
                                     "Work-Life Balance",
                                     "Dedicated Patient Base",
-                                    "FHO/FHT Opportunities"
+                                    "FHG/CCM and FFS Opportunities",
+                                    "Add direct billing",
+                                    "The clinic is physician led",
+                                    "Quiet town 1.5 hours from toronto",
+                                    "Competitive overhead"
                                 ].map((benefit, index) => (
                                     <div key={index} className="flex items-center gap-3">
                                         <MdCheckCircleOutline className="text-[#050660] text-xl shrink-0" />
@@ -63,8 +67,8 @@ const CareersPage = () => {
                             </div>
 
                             <div className="pt-4">
-                                <a 
-                                    href="mailto:cobourgcareclinic@gmail.com" 
+                                <a
+                                    href="mailto:cobourgcareclinic@gmail.com"
                                     className="inline-block bg-[#050660] text-white px-8 py-4 rounded-full font-bold hover:bg-[#0a2480] transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/20"
                                 >
                                     Apply for this Position
@@ -117,7 +121,7 @@ const CareersPage = () => {
                         desc: "Collaborate with experienced physicians and access resources to stay at the forefront of medical practice."
                     }
                 ].map((item, index) => (
-                    <motion.div 
+                    <motion.div
                         key={index}
                         whileHover={{ y: -10 }}
                         className="bg-white p-10 rounded-[32px] shadow-xl shadow-gray-100 border border-gray-50 flex flex-col items-center text-center space-y-4"
@@ -138,8 +142,8 @@ const CareersPage = () => {
                     Even if you don't see a perfect fit, we're always looking for exceptional people. Send us your resume and let's talk.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                    <a 
-                        href="mailto:cobourgcareclinic@gmail.com" 
+                    <a
+                        href="mailto:cobourgcareclinic@gmail.com"
                         className="bg-white text-[#050660] px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-all"
                     >
                         Send Resume
