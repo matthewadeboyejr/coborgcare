@@ -119,7 +119,7 @@ const PreventiveHealthReminders = () => {
                 transition={{ duration: 0.5 }}
                 className="max-w-3xl mx-auto mb-12 px-4"
             >
-                <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#0E31AC] to-[#0B95C7] p-5 sm:p-6 text-white shadow-lg">
+                <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#050660] to-[#0B95C7] p-5 sm:p-6 text-white shadow-lg">
                     <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl" />
                     <div className="relative z-10 flex items-start gap-4">
                         <div className="p-2.5 bg-white/20 rounded-xl shrink-0 mt-0.5">

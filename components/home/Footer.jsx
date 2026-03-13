@@ -77,6 +77,7 @@ export function FooterNavMobile() {
       title: "Company",
       links: [
         { href: "/about-us", label: "About Us" },
+        { href: "/careers", label: "Careers" },
         { href: "/policy", label: "Privacy policy" },
       ],
     },
@@ -162,6 +163,9 @@ export function FooterNavWeb() {
 
           <li className="cursor-pointer opacity-90">
             <Link href="/policy ">Privacy policy</Link>
+          </li>
+          <li className="cursor-pointer opacity-90">
+            <Link href="/careers">Careers</Link>
           </li>
         </ul>
       </div>

@@ -100,6 +100,7 @@ const navItems = [
   { name: "Appointments", href: "/appointments" },
   { name: "Contact", href: "/contact-us" },
   { name: "About Us", href: "/about-us" },
+  { name: "Careers", href: "/careers" },
 ];
 
 export default NavBar;

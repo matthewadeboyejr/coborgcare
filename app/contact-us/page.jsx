@@ -101,7 +101,7 @@ const ContactUs = () => {
                 <div>
                   <h3 className="font-medium text-lg">Phone</h3>
                   <a
-                    href="tel:+1629138798"
+                    href="tel:+16475089094"
                     className="text-[#595959] hover:text-primary-color transition-colors"
                   >
                     6475089094
@@ -115,7 +115,7 @@ const ContactUs = () => {
                 <div>
                   <h3 className="font-medium text-lg">Fax</h3>
                   <a
-                    href="tel:+1629138798"
+                    href=""
                     className="text-[#595959] hover:text-primary-color transition-colors"
                   >
                     (905) 2917547

@@ -55,7 +55,7 @@ const PreventiveHealthPopup = () => {
                         className="relative w-full max-w-lg overflow-hidden bg-white rounded-2xl shadow-2xl"
                     >
                         {/* Header */}
-                        <div className="relative p-8 text-center bg-gradient-to-br from-[#0E31AC] to-[#0B95C7] overflow-hidden">
+                        <div className="relative p-8 text-center bg-gradient-to-br from-[#050660] to-[#0B95C7] overflow-hidden">
                             {/* Decorative Circles */}
                             <div className="absolute top-0 left-0 w-32 h-32 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-2xl"></div>
                             <div className="absolute bottom-0 right-0 w-32 h-32 bg-white/10 rounded-full translate-x-1/2 translate-y-1/2 blur-2xl"></div>
@@ -107,8 +107,8 @@ const PreventiveHealthPopup = () => {
                             </div>
 
                             {/* Over 40 Tip */}
-                            <div className="mb-6 p-4 rounded-xl bg-gradient-to-r from-[#0E31AC]/10 to-[#0B95C7]/10 border border-[#0E31AC]/20">
-                                <p className="text-sm font-bold text-[#0E31AC] mb-1">
+                            <div className="mb-6 p-4 rounded-xl bg-gradient-to-r from-[#050660]/10 to-[#0B95C7]/10 border border-[#050660]/20">
+                                <p className="text-sm font-bold text-[#050660] mb-1">
                                     Over 40?
                                 </p>
                                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
@@ -126,7 +126,7 @@ const PreventiveHealthPopup = () => {
                                 <Link
                                     href="/appointments"
                                     onClick={handleClose}
-                                    className="block w-full py-3.5 px-6 font-semibold text-center text-white bg-[#0E31AC] hover:bg-[#0a2480] rounded-xl shadow-lg shadow-blue-900/20 transform transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                                    className="block w-full py-3.5 px-6 font-semibold text-center text-white bg-[#050660] hover:bg-[#0a2480] rounded-xl shadow-lg shadow-blue-900/20 transform transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
                                 >
                                     Book a Screening Now
                                 </Link>
