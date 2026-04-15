@@ -103,10 +103,10 @@ const PreventiveHealthReminders = () => {
     return (
         <section className="mb-24">
             {/* Heading */}
-            <h2 className="text-4xl md:text-[100px] xl:text-[140px] font-semibold md:font-medium mb-3 w-full text-center leading-tight sm:leading-snug md:leading-normal">
+            <h2 className="text-[32px] md:text-[100px] xl:text-[140px] font-semibold md:font-medium mb-3 w-full text-center leading-tight sm:leading-snug md:leading-normal">
                 Preventive Health
             </h2>
-            <p className="text-center text-base sm:text-lg md:text-xl text-[#595959] max-w-3xl mx-auto mb-8 px-4">
+            <p className="text-center text-sm sm:text-lg md:text-xl text-[#595959] max-w-3xl mx-auto mb-6 px-4">
                 Staying on top of preventive screenings is one of the best things you
                 can do for your health. Are you due for any of these?
             </p>
@@ -117,19 +117,19 @@ const PreventiveHealthReminders = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="max-w-3xl mx-auto mb-12 px-4"
+                className="max-w-3xl mx-auto mb-8 md:mb-12 px-4"
             >
-                <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#050660] to-[#0B95C7] p-5 sm:p-6 text-white shadow-lg">
+                <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#050660] to-[#0B95C7] p-4 sm:p-6 text-white shadow-lg">
                     <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl" />
-                    <div className="relative z-10 flex items-start gap-4">
-                        <div className="p-2.5 bg-white/20 rounded-xl shrink-0 mt-0.5">
-                            <FaHeartPulse className="text-2xl" />
+                    <div className="relative z-10 flex items-start gap-3 sm:gap-4">
+                        <div className="p-2 bg-white/20 rounded-xl shrink-0 mt-0.5">
+                            <FaHeartPulse className="text-xl sm:text-2xl" />
                         </div>
                         <div>
-                            <h3 className="text-lg sm:text-xl font-bold mb-1">
+                            <h3 className="text-base sm:text-xl font-bold mb-0.5 sm:mb-1">
                                 Over 40? These checks are for you.
                             </h3>
-                            <p className="text-blue-100 text-sm sm:text-base leading-relaxed">
+                            <p className="text-blue-100 text-[13px] sm:text-base leading-relaxed">
                                 Adults over 40 are recommended to regularly check their
                                 <strong className="text-white"> cholesterol</strong>,
                                 <strong className="text-white"> blood pressure</strong>,
@@ -144,7 +144,7 @@ const PreventiveHealthReminders = () => {
 
             {/* Cards Grid */}
             <motion.div
-                className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8"
+                className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-8"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -163,30 +163,30 @@ const PreventiveHealthReminders = () => {
                                 className={`h-1.5 bg-gradient-to-r ${item.gradient}`}
                             />
 
-                            <div className="p-6 sm:p-8 flex flex-col h-full">
+                            <div className="p-5 sm:p-8 flex flex-col h-full">
                                 {/* Icon */}
                                 <div
-                                    className={`w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}
+                                    className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-4 sm:mb-5 group-hover:scale-110 transition-transform duration-300`}
                                 >
-                                    <Icon className={`text-3xl ${item.iconColor}`} />
+                                    <Icon className={`text-2xl sm:text-3xl ${item.iconColor}`} />
                                 </div>
 
                                 {/* Title & Audience */}
-                                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-1">
+                                <h3 className="text-lg sm:text-2xl font-semibold text-gray-900 mb-0.5 sm:mb-1">
                                     {item.title}
                                 </h3>
-                                <p className={`text-sm font-medium ${item.iconColor} mb-3`}>
+                                <p className={`text-[13px] sm:text-sm font-medium ${item.iconColor} mb-2 sm:mb-3`}>
                                     {item.audience}
                                 </p>
 
                                 {/* Description */}
-                                <p className="text-sm sm:text-base text-[#595959] leading-relaxed mb-6 flex-1">
+                                <p className="text-[13px] sm:text-base text-[#595959] leading-relaxed mb-4 sm:mb-6 flex-1">
                                     {item.description}
                                 </p>
 
                                 {/* CTA */}
-                                <div className="flex">
-                                    <BookingBtn title="Book Now" />
+                                <div className="flex w-full">
+                                    <BookingBtn title="Book Screening" className="w-full text-center" />
                                 </div>
                             </div>
                         </motion.div>

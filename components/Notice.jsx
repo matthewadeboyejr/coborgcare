@@ -27,12 +27,13 @@ const Notice = () => {
                         </div>
 
                         <div className="flex-1 min-w-0">
-                            <h3 className="text-gray-900 font-bold text-lg leading-tight">
-                                Family Day Notice
+                            <h3 className="text-red-600  font-bold text-lg leading-tight">
+                                Clinic Temporary Closure
                             </h3>
-                            <p className="text-gray-600 mt-1 text-sm sm:text-base leading-relaxed">
-                                We will be closed on <span className="font-semibold text-blue-600">February 14th</span> and <span className="font-semibold text-blue-600">16th</span>.
-                            </p>
+                            <div className="text-gray-600 mt-1 text-sm sm:text-base leading-relaxed">
+                                <p>CLOSED: <span className="font-semibold text-blue-600">May 18, 2026 - May 31, 2026</span></p>
+                                <p>REOPENING: <span className="font-semibold text-blue-600">June 1, 2026</span></p>
+                            </div>
                         </div>
 
                         <button

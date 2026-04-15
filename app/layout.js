@@ -96,7 +96,7 @@ export default function RootLayout({ children }) {
         </noscript>
         <NavBar />
         <PreventiveHealthPopup />
-        {/* <Notice /> */}
+        <Notice />
         <Progress />
         {children}
         <Footer />

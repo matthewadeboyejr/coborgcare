@@ -61,15 +61,10 @@ const PreventiveHealthPopup = () => {
                             <div className="absolute bottom-0 right-0 w-32 h-32 bg-white/10 rounded-full translate-x-1/2 translate-y-1/2 blur-2xl"></div>
 
                             <div className="relative z-10 flex flex-col items-center justify-center text-white">
-                                <div className="p-3 mb-4 bg-white/20 backdrop-blur-md rounded-full shadow-inner">
-                                    <MdOutlineHealthAndSafety className="text-4xl" />
-                                </div>
-                                <h2 className="text-2xl sm:text-3xl font-bold drop-shadow-md">
+                                <h2 className="text-lg sm:text-2xl font-bold drop-shadow-md">
                                     Preventive Health Reminder
                                 </h2>
-                                <p className="mt-2 text-blue-100 font-medium text-base sm:text-lg">
-                                    Are you due for a check-up?
-                                </p>
+
                             </div>
 
                             {/* Close Button */}
@@ -82,45 +77,46 @@ const PreventiveHealthPopup = () => {
                         </div>
 
                         {/* Content */}
-                        <div className="p-6 sm:p-8 bg-white">
-                            <p className="text-gray-600 text-center text-sm sm:text-base mb-5 leading-relaxed">
-                                Staying on top of preventive screenings can save your life.
-                                Check if you&apos;re due for any of these:
-                            </p>
-
-                            {/* Screening Items */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                                {highlights.map((item, idx) => {
-                                    const Icon = item.icon;
-                                    return (
-                                        <div
-                                            key={idx}
-                                            className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors"
-                                        >
-                                            <Icon className={`text-2xl ${item.color} shrink-0`} />
-                                            <span className="text-sm font-medium text-gray-700">
-                                                {item.label}
-                                            </span>
-                                        </div>
-                                    );
-                                })}
-                            </div>
-
-                            {/* Over 40 Tip */}
-                            <div className="mb-6 p-4 rounded-xl bg-gradient-to-r from-[#050660]/10 to-[#0B95C7]/10 border border-[#050660]/20">
-                                <p className="text-sm font-bold text-[#050660] mb-1">
-                                    Over 40?
+                        <div className="p-6 sm:p-8 bg-white ">
+                            <div className="h-80 md:h-full overflow-y-auto">
+                                <p className="text-gray-600 text-center text-sm sm:text-base mb-5 leading-relaxed">
+                                    Staying on top of preventive screenings can save your life.
+                                    Check if you&apos;re due for any of these:
                                 </p>
-                                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                                    Adults 40+ should regularly check their{" "}
-                                    <strong>cholesterol</strong>,{" "}
-                                    <strong>blood pressure</strong>,{" "}
-                                    <strong>prostate health</strong> (men), and{" "}
-                                    <strong>blood glucose</strong>.
-                                    Early detection is key!
-                                </p>
-                            </div>
 
+                                {/* Screening Items */}
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 ">
+                                    {highlights.map((item, idx) => {
+                                        const Icon = item.icon;
+                                        return (
+                                            <div
+                                                key={idx}
+                                                className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors"
+                                            >
+                                                <Icon className={`text-2xl ${item.color} shrink-0`} />
+                                                <span className="text-sm font-medium text-gray-700">
+                                                    {item.label}
+                                                </span>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+
+                                {/* Over 40 Tip */}
+                                <div className="mb-6 p-4 rounded-xl bg-gradient-to-r from-[#050660]/10 to-[#0B95C7]/10 border border-[#050660]/20">
+                                    <p className="text-sm font-bold text-[#050660] mb-1">
+                                        Over 40?
+                                    </p>
+                                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                                        Adults 40+ should regularly check their{" "}
+                                        <strong>cholesterol</strong>,{" "}
+                                        <strong>blood pressure</strong>,{" "}
+                                        <strong>prostate health</strong> (men), and{" "}
+                                        <strong>blood glucose</strong>.
+                                        Early detection is key!
+                                    </p>
+                                </div>
+                            </div>
                             {/* CTA Buttons */}
                             <div className="space-y-3">
                                 <Link
