@@ -31,8 +31,8 @@ const Notice = () => {
                                 Clinic Temporary Closure
                             </h3>
                             <div className="text-gray-600 mt-1 text-sm sm:text-base leading-relaxed">
-                                <p>CLOSED: <span className="font-semibold text-blue-600">May 18, 2026 - May 31, 2026</span></p>
-                                <p>REOPENING: <span className="font-semibold text-blue-600">June 1, 2026</span></p>
+                                <p>CLOSED: <span className="font-semibold text-blue-600">May 16th, 2026 - May 31st, 2026</span></p>
+                                <p>REOPENING: <span className="font-semibold text-blue-600">June 1st, 2026</span></p>
                             </div>
                         </div>
 
