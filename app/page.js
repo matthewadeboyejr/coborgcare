@@ -14,7 +14,6 @@ import Testimonials from "@/components/home/Testimonials";
 import Tests from "@/components/home/Tests";
 import Why from "@/components/home/Why";
 
-import Notice from "@/components/Notice";
 
 export default function Home() {
   return (
@@ -31,7 +30,6 @@ export default function Home() {
       <OurDoctors />
       {/* <Blog /> */}
       <MarqueeService />
-      {/*     <Notice /> */}
       <AppointmentChoice />
       <Kiosks />
       <PictureGallary />
