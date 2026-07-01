@@ -137,7 +137,7 @@ const AppointmentChoice = () => {
               <div className="mt-4 p-3 bg-amber-50 border-l-4 border-amber-400 rounded">
                 <p className="text-xs text-amber-800">
                   <strong>Note:</strong>
-                  Dr. Isah attends to all other medical stuff except
+                  Dr. Isah attends to all other medical issues/discussion except
                   venepuncture, and seasonal vaccines
                 </p>
               </div>
