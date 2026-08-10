@@ -4,6 +4,7 @@ import Footer from "@/components/home/Footer";
 import NavBar from "@/components/NavBar";
 import Progress from "@/components/ProgressBar";
 import PreventiveHealthPopup from "@/components/FamilyDayPopup";
+import ChatBot from "@/components/ChatBot";
 import Script from "next/script";
 
 const geistSans = Geist({
@@ -98,6 +99,7 @@ export default function RootLayout({ children }) {
         <Progress />
         {children}
         <Footer />
+        <ChatBot />
       </body>
     </html>
   );

@@ -69,6 +69,7 @@ export function FooterNavMobile() {
     {
       title: "Resources",
       links: [
+        { href: "/uninsured-services", label: "Uninsured Services & Fees" },
         { href: "/contact-us", label: "Help & support" },
         { href: "/#blog", label: "Blog" },
       ],
@@ -149,6 +150,9 @@ export function FooterNavWeb() {
       <div className="text-white text-xs space-y-2">
         <p className="font-semibold  ">Resources</p>
         <ul className="space-y-3 font-medium">
+          <li className="cursor-pointer opacity-90">
+            <Link href="/uninsured-services">Uninsured Services & Fees</Link>
+          </li>
           <li className="cursor-pointer opacity-90">
             <Link href="/contact-us">Help & support</Link>
           </li>

@@ -13,7 +13,7 @@ import RespectfulPolicy from "@/components/home/RespectfulPolicy";
 import Testimonials from "@/components/home/Testimonials";
 import Tests from "@/components/home/Tests";
 import Why from "@/components/home/Why";
-
+import UninsuredServicesSection from "@/components/UninsuredServicesSection";
 
 export default function Home() {
   return (
@@ -30,11 +30,13 @@ export default function Home() {
       <OurDoctors />
       {/* <Blog /> */}
       <MarqueeService />
-      <AppointmentChoice />
+
       <Kiosks />
       <PictureGallary />
       {/* <Procedure /> */}
       <RespectfulPolicy />
+      <AppointmentChoice />
+      <UninsuredServicesSection titleTag="h2" />
       <Map />
     </div>
   );

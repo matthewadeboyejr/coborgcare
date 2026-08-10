@@ -98,6 +98,7 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "Doctors", href: "/doctors" },
   { name: "Appointments", href: "/appointments" },
+  { name: "Uninsured Fees", href: "/uninsured-services" },
   { name: "Contact", href: "/contact-us" },
   { name: "About Us", href: "/about-us" },
   { name: "Careers", href: "/careers" },

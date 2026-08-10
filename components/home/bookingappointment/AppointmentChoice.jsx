@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import SafariBooking from "./SafariBooking";
 
 const AppointmentChoice = () => {
@@ -16,7 +17,7 @@ const AppointmentChoice = () => {
       </div>
 
       {/* Booking Instructions */}
-      <div className="max-w-4xl mx-auto mb-12">
+      <div className="max-w-4xl mx-auto mb-12 space-y-4">
         <div className="bg-white/90 rounded-2xl p-6 shadow-lg border border-gray-200">
           <h3 className="text-2xl font-semibold text-[#0E31AC] mb-4 text-center">
             Booking Instructions
@@ -58,6 +59,19 @@ const AppointmentChoice = () => {
               </p>
             </div>
           </div>
+        </div>
+
+        {/* Uninsured Fee Notice Banner */}
+        <div className="bg-[#0B95C7]/10 border border-[#0B95C7]/30 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="text-sm text-[#050660] text-center sm:text-left">
+            <span className="font-bold">Notice regarding non-OHIP services:</span> Administrative forms, sick notes, driver&apos;s physicals, and medical reports are uninsured by OHIP.
+          </div>
+          <Link
+            href="/uninsured-services"
+            className="shrink-0 bg-[#0E31AC] hover:bg-[#050660] text-white text-xs font-semibold px-4 py-2.5 rounded-full transition-colors"
+          >
+            View Fee Schedule & FAQs
+          </Link>
         </div>
       </div>
 
