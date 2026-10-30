@@ -30,7 +30,7 @@ const feeScheduleData = [
     service: "Completion of Medical Forms – daycare, school, camp, etc.",
     fee: "$35",
     category: "Notes & Forms",
-    description: "Administrative form completion for educational institutions, daycare, or youth camps.",
+    description: "Administrative form completion for educational institutions, daycare, or youth camps. (Note: TB test & report for school purposes is free).",
   },
   {
     id: "immunization-form",
@@ -117,18 +117,25 @@ const feeScheduleData = [
     description: "Specialized occupational physical fitness examination for active or applicant firefighters.",
   },
   {
+    id: "tb-test-school",
+    service: "TB Skin Test & Report (School / Education)",
+    fee: "Free",
+    category: "Immunizations & Tests",
+    description: "Tuberculin skin test (1-step or 2-step) and official report for school entry or educational programs.",
+  },
+  {
     id: "tb-test-1step",
-    service: "1-Step TB Skin Test",
+    service: "1-Step TB Skin Test (Employment)",
     fee: "$70",
     category: "Immunizations & Tests",
-    description: "Single-step Mantoux tuberculin skin test required for employment or school entry.",
+    description: "Single-step Mantoux tuberculin skin test and report required for employment or occupational purposes. (Free for school purposes).",
   },
   {
     id: "tb-test-2step",
-    service: "2-Step TB Skin Test",
+    service: "2-Step TB Skin Test (Employment)",
     fee: "$100",
     category: "Immunizations & Tests",
-    description: "Two-step baseline Mantoux tuberculin skin test for healthcare or specialized employment requirements.",
+    description: "Two-step baseline Mantoux tuberculin skin test and report for healthcare or specialized employment requirements. (Free for school purposes).",
   },
 ];
 
@@ -182,6 +189,11 @@ const faqsData = [
     q: "Why can the cost of some forms be different?",
     a: "Forms vary considerably in complexity. A simple form may take only a few minutes, while an insurance or legal report may require the physician to review a substantial medical record, provide a detailed medical opinion, and prepare a comprehensive report. If your request requires substantially more work than normally expected, we will endeavour to advise you of the applicable fee before completing it.",
     category: "Payment & Billing",
+  },
+  {
+    q: "Is a TB (tuberculosis) skin test and report free for school?",
+    a: "Yes! TB skin tests (1-step and 2-step) and the accompanying completion of school/educational forms and reports are completely FREE (OHIP-covered) for school, college, university, or training program entry.\n\nHowever, when a TB skin test is required for employment, pre-employment screening, or occupational clearance, uninsured charges apply ($70 for 1-step, $100 for 2-step).",
+    category: "Coverage & Fees",
   },
 ];
 
@@ -315,11 +327,10 @@ export default function UninsuredServicesSection({ titleTag = "h2", isFullPage =
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all whitespace-nowrap ${
-                selectedCategory === cat
-                  ? "bg-[#0E31AC] text-white shadow-md"
-                  : "bg-white text-[#595959] hover:bg-gray-100"
-              }`}
+              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all whitespace-nowrap ${selectedCategory === cat
+                ? "bg-[#0E31AC] text-white shadow-md"
+                : "bg-white text-[#595959] hover:bg-gray-100"
+                }`}
             >
               {cat}
             </button>
@@ -355,7 +366,13 @@ export default function UninsuredServicesSection({ titleTag = "h2", isFullPage =
                       </span>
                     </td>
                     <td className="py-4 px-6 text-right font-bold text-lg text-[#0E31AC] whitespace-nowrap">
-                      {item.fee}
+                      {item.fee.toLowerCase().includes("free") ? (
+                        <span className="bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs sm:text-sm font-bold px-3 py-1 rounded-full inline-block shadow-xs">
+                          Free
+                        </span>
+                      ) : (
+                        item.fee
+                      )}
                     </td>
                   </tr>
                 ))
@@ -382,9 +399,14 @@ export default function UninsuredServicesSection({ titleTag = "h2", isFullPage =
                   <span className="bg-[#0E31AC]/10 text-[#0E31AC] text-xs font-semibold px-2.5 py-0.5 rounded-full">
                     {item.category}
                   </span>
-                  <span className="font-bold text-xl text-[#0E31AC]">
-                    {item.fee}
-                  </span>
+                  {item.fee.toLowerCase().includes("free") ? (
+                    <span className="bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-bold px-2.5 py-1 rounded-full shadow-xs">
+                      Free                     </span>
+                  ) : (
+                    <span className="font-bold text-xl text-[#0E31AC]">
+                      {item.fee}
+                    </span>
+                  )}
                 </div>
                 <h4 className="font-bold text-[#050660] text-base">
                   {item.service}
@@ -478,9 +500,8 @@ export default function UninsuredServicesSection({ titleTag = "h2", isFullPage =
                     {faq.q}
                   </span>
                   <RiArrowDownSLine
-                    className={`text-2xl text-[#0E31AC] shrink-0 transition-transform duration-300 ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
+                    className={`text-2xl text-[#0E31AC] shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
 

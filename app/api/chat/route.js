@@ -33,8 +33,9 @@ UNINSURED SERVICES & FEE SCHEDULE (Non-OHIP):
 - Copy of Medical Records: $30 administrative fee + $0.30/page
 - Ear Wax Removal: $25 (One Ear), $50 (Both Ears)
 - Firefighter's Physical Examination: $150
-- 1-Step TB Skin Test: $70
-- 2-Step TB Skin Test: $100
+- TB Skin Test & Report (School / Education): FREE (OHIP-covered)
+- 1-Step TB Skin Test (Employment): $70
+- 2-Step TB Skin Test (Employment): $100
 
 WSIB POLICIES:
 - Official WSIB Functional Abilities Form (FAF): Billed directly to WSIB ($45 WSIB physician rate). The patient is NOT charged.
@@ -92,7 +93,7 @@ function getSmartClinicResponse(query) {
   }
 
   if (q.includes("tb") || q.includes("tuberculin") || q.includes("mantoux")) {
-    return "TB Skin Test fees:\n• **1-Step TB Skin Test**: $70\n• **2-Step TB Skin Test**: $100";
+    return "TB (Tuberculosis) Skin Test & Report Fees:\n• **For School / Students**: **FREE** (OHIP-covered for school, college, and university entry).\n• **For Employment**:\n  - 1-Step TB Skin Test: $70\n  - 2-Step TB Skin Test: $100";
   }
 
   if (q.includes("record") || q.includes("copy") || q.includes("chart")) {

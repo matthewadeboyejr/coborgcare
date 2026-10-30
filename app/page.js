@@ -30,7 +30,6 @@ export default function Home() {
       <OurDoctors />
       {/* <Blog /> */}
       <MarqueeService />
-
       <Kiosks />
       <PictureGallary />
       {/* <Procedure /> */}
