@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Our Doctors",
   description:
-    "Meet the experienced family physicians at Cobourg Care Clinic. Our doctors provide general consultations, chronic disease management, preventive care, and immunization services.",
+    "Meet the family physicians at Cobourg Care Clinic across our two Cobourg locations: Dr. Isah Usman (609 William Street) and Dr. Sunday (628 Ontario Street — accepting new patients).",
   openGraph: {
     title: "Our Doctors | Cobourg Care Clinic",
     description:

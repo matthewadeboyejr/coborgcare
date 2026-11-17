@@ -20,9 +20,6 @@ const reminders = [
         audience: "Women aged 25–74",
         description:
             "Cervical screening helps detect abnormal cells early. If you're due for your Pap smear, don't delay — book your screening today.",
-        gradient: "from-pink-500 to-rose-400",
-        bgColor: "bg-pink-50",
-        iconColor: "text-pink-600",
     },
     {
         id: "prostate",
@@ -31,9 +28,6 @@ const reminders = [
         audience: "Men aged 50+",
         description:
             "Prostate screening is recommended for men over 50. A simple check can make a big difference. Book your appointment now.",
-        gradient: "from-blue-500 to-indigo-400",
-        bgColor: "bg-blue-50",
-        iconColor: "text-blue-600",
     },
     {
         id: "immunizations",
@@ -42,9 +36,6 @@ const reminders = [
         audience: "All ages",
         description:
             "Stay up-to-date with flu, COVID-19, shingles, and other essential vaccines. Protect yourself and your family.",
-        gradient: "from-emerald-500 to-teal-400",
-        bgColor: "bg-emerald-50",
-        iconColor: "text-emerald-600",
     },
     {
         id: "blood-pressure",
@@ -53,9 +44,6 @@ const reminders = [
         audience: "Adults 40+ (essential)",
         description:
             "If you're over 40, regular blood pressure and cholesterol checks are essential to prevent heart disease and stroke. Know your numbers — schedule a check-up.",
-        gradient: "from-red-500 to-orange-400",
-        bgColor: "bg-red-50",
-        iconColor: "text-red-600",
     },
     {
         id: "diabetes",
@@ -64,9 +52,6 @@ const reminders = [
         audience: "Adults 40+ or at-risk",
         description:
             "Early detection of diabetes can prevent serious complications. If you're at risk, a simple blood test is all it takes.",
-        gradient: "from-amber-500 to-yellow-400",
-        bgColor: "bg-amber-50",
-        iconColor: "text-amber-600",
     },
     {
         id: "colorectal",
@@ -75,9 +60,6 @@ const reminders = [
         audience: "Adults aged 50–74",
         description:
             "Colorectal cancer screening saves lives through early detection. If you're due, talk to your doctor and book today.",
-        gradient: "from-violet-500 to-purple-400",
-        bgColor: "bg-violet-50",
-        iconColor: "text-violet-600",
     },
 ];
 
@@ -156,31 +138,26 @@ const PreventiveHealthReminders = () => {
                         <motion.div
                             key={item.id}
                             variants={cardVariants}
-                            className={`relative rounded-3xl ${item.bgColor} overflow-hidden group hover:shadow-xl transition-shadow duration-300`}
+                            className="relative rounded-3xl bg-white border border-gray-200/80 overflow-hidden group hover:border-[#0E31AC]/30 hover:shadow-xl transition-all duration-300"
                         >
-                            {/* Gradient Accent Strip */}
-                            <div
-                                className={`h-1.5 bg-gradient-to-r ${item.gradient}`}
-                            />
-
-                            <div className="p-5 sm:p-8 flex flex-col h-full">
-                                {/* Icon */}
-                                <div
-                                    className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-4 sm:mb-5 group-hover:scale-110 transition-transform duration-300`}
-                                >
-                                    <Icon className={`text-2xl sm:text-3xl ${item.iconColor}`} />
+                            <div className="p-6 sm:p-8 flex flex-col h-full">
+                                {/* Top Row: Unified Brand Icon + Audience Badge */}
+                                <div className="flex items-center justify-between gap-3 mb-5">
+                                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#0B95C7]/10 border border-[#0B95C7]/15 flex items-center justify-center shrink-0 group-hover:bg-[#0E31AC] group-hover:text-white transition-colors duration-300">
+                                        <Icon className="text-2xl sm:text-3xl text-[#0E31AC] group-hover:text-white transition-colors duration-300" />
+                                    </div>
+                                    <span className="inline-block bg-[#EDEEF1] text-[#050660] text-xs font-semibold px-3 py-1.5 rounded-full">
+                                        {item.audience}
+                                    </span>
                                 </div>
 
-                                {/* Title & Audience */}
-                                <h3 className="text-lg sm:text-2xl font-semibold text-gray-900 mb-0.5 sm:mb-1">
+                                {/* Title */}
+                                <h3 className="text-lg sm:text-2xl font-semibold text-[#050660] mb-2">
                                     {item.title}
                                 </h3>
-                                <p className={`text-[13px] sm:text-sm font-medium ${item.iconColor} mb-2 sm:mb-3`}>
-                                    {item.audience}
-                                </p>
 
                                 {/* Description */}
-                                <p className="text-[13px] sm:text-base text-[#595959] leading-relaxed mb-4 sm:mb-6 flex-1">
+                                <p className="text-[13px] sm:text-base text-[#595959] leading-relaxed mb-6 flex-1">
                                     {item.description}
                                 </p>
 

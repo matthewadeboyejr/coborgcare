@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with Cobourg Care Clinic. Find our address, phone number, office hours, and send us a message. Located in Cobourg, Ontario.",
+    "Get in touch with Cobourg Care Clinic across our two Cobourg locations (Unit 5A, 609 William Street & 628 Ontario Street). Find hours, directions, phone, and fax.",
   openGraph: {
     title: "Contact Us | Cobourg Care Clinic",
     description:

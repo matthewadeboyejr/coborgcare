@@ -15,6 +15,10 @@ import {
   RiMoneyDollarCircleLine,
   RiBankCardLine,
   RiDraftLine,
+  RiSmartphoneLine,
+  RiTimeLine,
+  RiArrowRightUpLine,
+  RiShieldCheckLine,
 } from "react-icons/ri";
 
 const feeScheduleData = [
@@ -425,41 +429,117 @@ export default function UninsuredServicesSection({ titleTag = "h2", isFullPage =
       </div>
 
       {/* Payment Details & Policies Card */}
-      <div className="bg-gradient-to-br from-[#050660] to-[#0E31AC] text-white p-8 sm:p-12 rounded-3xl shadow-lg relative overflow-hidden">
-        <div className="relative z-10 max-w-4xl space-y-6">
-          <div className="flex items-center gap-3">
-            <div className="p-3 bg-white/10 rounded-xl text-2xl text-[#01bbf8]">
-              <RiWallet3Line />
-            </div>
-            <h3 className="text-2xl sm:text-3xl font-bold">
-              Payment Terms & Guidelines
-            </h3>
-          </div>
+      <div className="bg-gradient-to-br from-[#04063A] via-[#07115C] to-[#0B2D96] text-white p-6 sm:p-10 lg:p-12 rounded-3xl shadow-xl border border-white/10 relative overflow-hidden">
+        {/* Ambient Decorative Glows */}
+        <div className="absolute -top-24 -right-24 w-72 h-72 bg-[#01bbf8]/15 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-[#0E31AC]/40 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="grid md:grid-cols-2 gap-6 text-sm sm:text-base leading-relaxed">
-            <div className="bg-white/10 p-5 rounded-2xl backdrop-blur-sm border border-white/10 space-y-2">
-              <h4 className="font-bold text-[#01bbf8] text-lg flex items-center gap-2">
-                <RiCheckDoubleLine /> Due Date & Accepted Methods
-              </h4>
-              <p className="text-white/90">
-                Payment for uninsured services is generally required at the time the service is provided or when the completed document is collected.
-              </p>
-              <div className="pt-2 flex items-center gap-4 text-xs font-bold uppercase tracking-wider text-white">
-                <span className="bg-white/20 px-3 py-1.5 rounded-lg">💵 Cash</span>
-                <span className="bg-white/20 px-3 py-1.5 rounded-lg">📲 e-Transfer</span>
+        <div className="relative z-10 space-y-8">
+          {/* Header Row */}
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-white/10">
+            <div className="flex items-start sm:items-center gap-4">
+              <div className="p-3.5 bg-white/10 border border-white/15 rounded-2xl text-2xl text-[#01bbf8] shrink-0 shadow-inner">
+                <RiWallet3Line />
+              </div>
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#01bbf8] mb-1">
+                  Billing &amp; Payment Policy
+                </p>
+                <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">
+                  Payment Terms &amp; Guidelines
+                </h3>
               </div>
             </div>
 
-            <div className="bg-white/10 p-5 rounded-2xl backdrop-blur-sm border border-white/10 space-y-2">
-              <h4 className="font-bold text-[#01bbf8] text-lg flex items-center gap-2">
-                <RiInformationLine /> Complex Requests & Confirmation
-              </h4>
-              <p className="text-white/90">
-                Patients are encouraged to confirm the applicable fee with our reception team prior to requesting a form, report, or exam.
-              </p>
-              <p className="text-xs text-white/80 italic">
-                Fees may vary for unusually complex requests requiring significant extra physician time. You will be advised before work is completed.
-              </p>
+            <span className="inline-flex items-center gap-2 bg-white/10 border border-white/15 text-white/90 text-xs font-medium px-4 py-2 rounded-full w-fit backdrop-blur-sm">
+              <RiShieldCheckLine className="text-base text-[#01bbf8]" />
+              Non-OHIP Administrative Services
+            </span>
+          </div>
+
+          {/* Balanced Full-Width Bento Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+            {/* Left Panel: Timing & Accepted Payment Methods */}
+            <div className="lg:col-span-6 bg-white/[0.07] hover:bg-white/[0.09] transition-colors p-6 rounded-2xl backdrop-blur-md border border-white/15 flex flex-col justify-between gap-6">
+              <div className="space-y-3">
+                <div className="flex items-center gap-2.5 text-[#01bbf8]">
+                  <RiCheckDoubleLine className="text-xl shrink-0" />
+                  <h4 className="font-semibold text-lg text-white">
+                    Due Date &amp; Accepted Methods
+                  </h4>
+                </div>
+                <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+                  Payment for uninsured services is generally required at the
+                  time the service is provided or when the completed document is
+                  collected.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                <div className="flex items-center gap-3 bg-white/10 border border-white/15 rounded-xl p-3.5">
+                  <div className="p-2.5 rounded-lg bg-[#01bbf8]/15 text-[#01bbf8] text-xl shrink-0">
+                    <RiMoneyDollarCircleLine />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-wider text-white">
+                      Cash
+                    </p>
+                    <p className="text-[11px] text-white/70">
+                      Pay in-person at reception
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 bg-white/10 border border-white/15 rounded-xl p-3.5">
+                  <div className="p-2.5 rounded-lg bg-[#01bbf8]/15 text-[#01bbf8] text-xl shrink-0">
+                    <RiSmartphoneLine />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-wider text-white">
+                      e-Transfer
+                    </p>
+                    <p className="text-[11px] text-white/70">
+                      Quick digital bank transfer
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Panel: Confirmation & Complex Requests */}
+            <div className="lg:col-span-6 bg-white/[0.07] hover:bg-white/[0.09] transition-colors p-6 rounded-2xl backdrop-blur-md border border-white/15 flex flex-col justify-between gap-5">
+              <div className="space-y-3">
+                <div className="flex items-center gap-2.5 text-[#01bbf8]">
+                  <RiInformationLine className="text-xl shrink-0" />
+                  <h4 className="font-semibold text-lg text-white">
+                    Complex Requests &amp; Fee Confirmation
+                  </h4>
+                </div>
+                <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+                  Patients are encouraged to confirm the applicable fee with our
+                  reception team prior to requesting a form, report, or
+                  examination.
+                </p>
+              </div>
+
+              <div className="bg-[#01bbf8]/10 border border-[#01bbf8]/25 rounded-xl p-4 flex items-start gap-3">
+                <RiTimeLine className="text-[#01bbf8] text-lg shrink-0 mt-0.5" />
+                <p className="text-xs sm:text-sm text-white/85 leading-relaxed">
+                  Fees may vary for unusually complex requests requiring
+                  significant extra physician time. You will always be advised
+                  before work is completed.
+                </p>
+              </div>
+
+              <div className="flex items-center justify-end">
+                <Link
+                  href="/contact-us"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#01bbf8] hover:text-white transition-colors"
+                >
+                  Confirm a fee with reception
+                  <RiArrowRightUpLine className="text-sm" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

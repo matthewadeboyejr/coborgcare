@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 import { FaAt, FaFax, FaLocationArrow, FaPhone } from "react-icons/fa";
 import Map from "@/components/home/Map";
 import emailjs from "@emailjs/browser";
+import { CLINIC_BRANCHES, CLINIC_CONTACT } from "@/data/clinicLocations";
 
 const ContactUs = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -87,10 +88,10 @@ const ContactUs = () => {
                 <div>
                   <h3 className="font-medium text-lg">Email</h3>
                   <a
-                    href="mailto:cobourgcareclinic@gmail.com"
+                    href={`mailto:${CLINIC_CONTACT.email}`}
                     className="text-[#595959] hover:text-primary-color transition-colors"
                   >
-                    cobourgcareclinic@gmail.com
+                    {CLINIC_CONTACT.email}
                   </a>
                 </div>
               </li>
@@ -101,10 +102,10 @@ const ContactUs = () => {
                 <div>
                   <h3 className="font-medium text-lg">Phone</h3>
                   <a
-                    href="tel:+16475089094"
+                    href={`tel:+1${CLINIC_CONTACT.phone}`}
                     className="text-[#595959] hover:text-primary-color transition-colors"
                   >
-                    6475089094
+                    {CLINIC_CONTACT.phoneFormatted}
                   </a>
                 </div>
               </li>
@@ -114,27 +115,43 @@ const ContactUs = () => {
                 </div>
                 <div>
                   <h3 className="font-medium text-lg">Fax</h3>
-                  <a
-                    href=""
-                    className="text-[#595959] hover:text-primary-color transition-colors"
-                  >
-                    (905) 2917547
-                  </a>
+                  <span className="text-[#595959]">{CLINIC_CONTACT.fax}</span>
                 </div>
               </li>
               <li className="flex gap-4 items-start">
                 <div className="bg-primary-color flex justify-center items-center w-fit p-3 text-white rounded-full mt-1">
                   <FaLocationArrow className="text-lg" />
                 </div>
-                <div>
-                  <h3 className="font-medium text-lg">Address</h3>
-                  <p className="text-[#595959]">
-                    Unit 5A, 609 William Street
-                    <br />
-                    Cobourg, Ontario, K9A 3A6
-                    <br />
-                    Canada
-                  </p>
+                <div className="space-y-3">
+                  <h3 className="font-medium text-lg">Our Two Locations</h3>
+                  <div className="space-y-3">
+                    {CLINIC_BRANCHES.map((branch) => (
+                      <div
+                        key={branch.id}
+                        className="bg-white rounded-2xl p-4 border border-gray-200 space-y-1"
+                      >
+                        <div className="flex flex-wrap items-center gap-2">
+                          <p className="font-semibold text-[#050660]">
+                            {branch.shortAddress}
+                          </p>
+                          {branch.acceptingNewPatients && (
+                            <span className="bg-emerald-100 text-emerald-800 text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
+                              Accepting New Patients
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-sm text-[#595959]">
+                          {branch.fullAddress}
+                        </p>
+                        <p className="text-xs text-[#0E31AC] font-medium">
+                          Physician: {branch.leadDoctor.name}
+                        </p>
+                        <p className="text-xs text-[#595959]">
+                          {branch.hours.weekday} &bull; {branch.hours.saturday}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </li>
             </ul>

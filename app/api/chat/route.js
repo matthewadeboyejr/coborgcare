@@ -3,21 +3,37 @@ import { NextResponse } from "next/server";
 const CLINIC_KNOWLEDGE_SYSTEM_PROMPT = `
 You are "Cobie", the official AI Healthcare Assistant for Cobourg Care Clinic in Cobourg, Ontario. Your role is to provide accurate, polite, empathetic, and direct information to patients.
 
-CLINIC INFORMATION:
-- Address: Unit 5A, 609 William Street Cobourg, Ontario, K9A 3A6, Canada
-- Hours: Monday - Friday: 9:30 AM - 5:00 PM, Saturday: 10:00 AM - 4:00 PM, Sunday: Closed
+CLINIC INFORMATION (TWO COBOURG LOCATIONS):
+1. 609 William Street Branch:
+   - Address: Unit 5A, 609 William Street, Cobourg, Ontario, K9A 3A6, Canada
+   - Lead Physician: Dr. Isah Usman
+   - Supporting Clinician: Dr. Paul Edokpayi (Blood work / Venepuncture & Immunizations ONLY at 609 William Street)
+   - Hours: Monday - Friday: 9:30 AM - 5:00 PM, Saturday: 10:00 AM - 4:00 PM, Sunday: Closed
+   - Walk-ins: Welcome
+
+2. 628 Ontario Street Branch (NEW LOCATION — ACCEPTING NEW PATIENTS):
+   - Address: 628 Ontario Street, Cobourg, Ontario, Canada
+   - Lead Physician: Dr. Sunday  (Family Physician)
+   - Status: Accepting NEW family practice patients AND walk-in patients!
+   - Hours: Monday - Friday: 9:30 AM - 5:00 PM, Saturday: 10:00 AM - 3:00 PM, Sunday: Closed
+
+SHARED CONTACT DETAILS:
 - Phone: 647-508-9094
 - Fax: (905) 291-7547
 - Accepted Payment Methods: Cash and e-Transfer
 
 DOCTOR ROSTER & BOOKING RULES:
-1. Dr. Paul Edokpayi:
-   - Services: Venepuncture (Blood work), Vaccinations, Immunizations.
-   - Rule: Patients rostered coming for blood work or immunizations MUST book under Dr. Paul.
+1. Dr. Sunday  (628 Ontario Street):
+   - Services: New Family Practice Patient Registration, Walk-In Care, General Consultations, Health Check-ups, Chronic Disease Management, Preventive Care.
+   - Rule: Patients looking to register as a NEW family practice patient or visit our 628 Ontario Street branch should book under Dr. Sunday.
 
-2. Dr. Isah:
-   - Services: General Consultations, Health Check-ups, Chronic Disease Management, Preventive Care, Family Medicine.
-   - Rule: All other medical issues/discussions (except blood work and seasonal vaccines) MUST book under Dr. Isah.
+2. Dr. Isah Usman (Unit 5A, 609 William Street):
+   - Services: General Consultations, Walk-In Care, Health Check-ups, Chronic Disease Management, Preventive Care, Family Medicine.
+   - Rule: All general medical issues/discussions at 609 William Street (except blood work and seasonal vaccines) book under Dr. Isah.
+
+3. Dr. Paul Edokpayi (Unit 5A, 609 William Street ONLY):
+   - Services: Venepuncture (Blood work), Vaccinations, Immunizations.
+   - Rule: Existing/rostered patients coming for blood work or immunizations MUST book under Dr. Paul at 609 William Street only.
 
 UNINSURED SERVICES & FEE SCHEDULE (Non-OHIP):
 - Sick Note / Fit-to-Return-to-Work or School Note: $35
@@ -44,10 +60,10 @@ WSIB POLICIES:
 RESPONSE STYLE RULES:
 - Be concise, direct, helpful, and friendly.
 - Do NOT repeat generic greetings ("Hello, I am Cobie...") on follow-up questions unless the user explicitly greets you.
-- When asked about booking an appointment, clearly explain:
-  1. Book under Dr. Paul for Blood Work / Vaccinations.
-  2. Book under Dr. Isah for all General Care & Check-ups.
-  3. Direct them to click 'Appointments' in the website header or call reception at 647-508-9094.
+- When asked about booking an appointment, clearly explain both locations:
+  1. 628 Ontario Street — Dr. Sunday (Accepting NEW family practice patients & walk-ins).
+  2. Unit 5A, 609 William Street — Dr. Isah Usman (General care & walk-ins) and Dr. Paul Edokpayi (Blood work & vaccinations ONLY at 609 William Street).
+  3. Direct them to click 'Appointments' in the website header to choose their branch, or call reception at 647-508-9094.
 - If asked about medical emergencies, instruct the user to call 911 or visit the nearest Emergency Department immediately.
 `;
 
@@ -59,21 +75,36 @@ function getSmartClinicResponse(query) {
   }
 
   if (
+    q.includes("new patient") ||
+    q.includes("register") ||
+    q.includes("registration") ||
+    q.includes("accepting") ||
+    q.includes("sunday") ||
+    q.includes("tewogbade") ||
+    q.includes("ontario st") ||
+    q.includes("628")
+  ) {
+    return "Yes! Cobourg Care Clinic is **accepting new family practice patients** at our **628 Ontario Street, Cobourg** branch with **Dr. Sunday**.\n\n• **Walk-ins** are also welcome at both locations (628 Ontario St & Unit 5A, 609 William St).\n• Click **Appointments** in the top menu and select the **628 Ontario Street** branch to register or book online, or call **647-508-9094**.";
+  }
+
+  if (
     q.includes("appointment") ||
     q.includes("book") ||
     q.includes("schedule") ||
     q.includes("see a doctor") ||
-    q.includes("visit")
+    q.includes("visit") ||
+    q.includes("walk-in") ||
+    q.includes("walk in")
   ) {
-    return "To book an appointment at Cobourg Care Clinic:\n\n• **Dr. Paul Edokpayi**: Book here for Blood Work (Venepuncture) and Vaccinations/Immunizations.\n• **Dr. Isah**: Book here for all General Consultations, Health Check-ups, Chronic Disease Management, and Family Medicine.\n\nYou can click **Appointments** in the top navigation bar to book online via Ocean Booking, or call our reception at **647-508-9094**.";
+    return "We operate across **two Cobourg locations** (both welcome walk-in patients):\n\n• **628 Ontario Street — Dr. Sunday**: Accepting **new family practice patients**, walk-ins, and general family medicine.\n• **Unit 5A, 609 William Street — Dr. Isah Usman**: General consultations, walk-ins, chronic disease management, and family medicine.\n• **Unit 5A, 609 William Street ONLY — Dr. Paul Edokpayi**: Blood work (venepuncture) and vaccinations/immunizations for existing/rostered patients.\n\nClick **Appointments** in the top navigation bar to choose your branch and book online, or call **647-508-9094**.";
   }
 
   if (q.includes("paul") || q.includes("blood") || q.includes("vaccine") || q.includes("immunization") || q.includes("flu")) {
-    return "Dr. Paul Edokpayi handles **Venepuncture (Blood work)** and **Vaccinations/Immunizations**. Please book under Dr. Paul for these services.";
+    return "Dr. Paul Edokpayi handles **Venepuncture (Blood work)** and **Vaccinations/Immunizations** at our **609 William Street location only**. Please select the 609 William Street branch on the Appointments page to book under Dr. Paul.";
   }
 
-  if (q.includes("isah") || q.includes("doctor") || q.includes("family doctor") || q.includes("physician") || q.includes("checkup")) {
-    return "Dr. Isah is an experienced Family Physician handling **General Consultations, Health Check-ups, Chronic Disease Management, and Family Medicine**. Please book under Dr. Isah.";
+  if (q.includes("isah") || q.includes("usman") || q.includes("doctor") || q.includes("family doctor") || q.includes("physician") || q.includes("checkup")) {
+    return "We have two Family Physicians across our two Cobourg branches:\n• **Dr. Sunday** (628 Ontario Street) — **Accepting new family practice patients** & walk-ins.\n• **Dr. Isah Usman** (Unit 5A, 609 William Street) — General consultations, health check-ups, chronic disease management, and walk-ins.\n\nVisit **Appointments** to book under your preferred location.";
   }
 
   if (q.includes("sick note") || q.includes("work note") || q.includes("school note") || q.includes("fit to return")) {
@@ -105,11 +136,11 @@ function getSmartClinicResponse(query) {
   }
 
   if (q.includes("hour") || q.includes("open") || q.includes("close") || q.includes("time") || q.includes("saturday") || q.includes("sunday")) {
-    return "Cobourg Care Clinic Operating Hours:\n• **Mon - Fri**: 9:30 AM – 5:00 PM\n• **Saturday**: 10:00 AM – 4:00 PM\n• **Sunday**: Closed";
+    return "Cobourg Care Clinic Operating Hours:\n\n**Unit 5A, 609 William Street (Dr. Isah Usman / Dr. Paul):**\n• Mon – Fri: 9:30 AM – 5:00 PM\n• Saturday: 10:00 AM – 4:00 PM\n• Sunday: Closed\n\n**628 Ontario Street (Dr. Sunday):**\n• Mon – Fri: 9:30 AM – 5:00 PM\n• Saturday: 10:00 AM – 3:00 PM\n• Sunday: Closed";
   }
 
-  if (q.includes("address") || q.includes("location") || q.includes("where") || q.includes("direction") || q.includes("william")) {
-    return "Cobourg Care Clinic Location:\n**Unit 5A, 609 William Street, Cobourg, Ontario, K9A 3A6, Canada**.";
+  if (q.includes("address") || q.includes("location") || q.includes("where") || q.includes("direction") || q.includes("william") || q.includes("branch")) {
+    return "Cobourg Care Clinic has **two locations** in Cobourg, Ontario (walk-ins welcome at both):\n\n• **628 Ontario Street, Cobourg** — **Dr. Sunday** *(Accepting New Family Practice Patients)*\n• **Unit 5A, 609 William Street, Cobourg, K9A 3A6** — **Dr. Isah Usman** & **Dr. Paul Edokpayi**";
   }
 
   if (q.includes("phone") || q.includes("contact") || q.includes("fax") || q.includes("call") || q.includes("reception")) {
@@ -124,7 +155,7 @@ function getSmartClinicResponse(query) {
     return "Medically necessary physician services are covered by OHIP. Non-insured services (sick notes $35, daycare forms $35, driver's exams $150, T2201 $100, record copies $30+$0.30/pg) are paid by the patient or third party via Cash or e-Transfer. Visit our **Uninsured Fees** page for the full schedule.";
   }
 
-  return "I'm Cobie, your Cobourg Care AI Assistant! How can I help you today? You can ask about:\n• Booking appointments (Dr. Paul vs Dr. Isah)\n• Clinic hours & location\n• Sick notes & uninsured form fees\n• WSIB & payment methods\nOr call reception at **647-508-9094**.";
+  return "I'm Cobie, your Cobourg Care AI Assistant! How can I help you today? You can ask about:\n• New patient registration (Dr. Sunday at 628 Ontario St)\n• Booking appointments across both Cobourg branches\n• Clinic hours & locations (609 William St & 628 Ontario St)\n• Sick notes & uninsured form fees\nOr call reception at **647-508-9094**.";
 }
 
 export async function POST(req) {

@@ -5,37 +5,89 @@ import React, { useState } from "react";
 import { IoLogoFacebook, IoLogoLinkedin } from "react-icons/io";
 import { IoChevronDownSharp } from "react-icons/io5";
 
+import { CLINIC_BRANCHES, CLINIC_CONTACT } from "@/data/clinicLocations";
+
 export default function Footer() {
   return (
-    <footer className="bg-black rounded-b-4xl w-full md:p-20 p-8 space-y-20">
-      <div className="flex md:flex-row flex-col md:items-center  gap-16 ">
-        <div className="space-y-5 2/4 ">
-          <h2 className="font-bold text-5xl text-[#0B95C7]">
+    <footer className="bg-black rounded-b-4xl w-full md:p-16 lg:p-20 p-8 space-y-14">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        {/* Brand, Socials & Shared Contact */}
+        <div className="lg:col-span-5 space-y-6">
+          <h2 className="font-bold text-4xl sm:text-5xl leading-tight text-[#0B95C7]">
             Keeping Cobourg Healthy – One Family at a Time.
           </h2>
-          <p className="text-white text-lg flex gap-5">
-            <Link href="/" className=" hover:opacity-90 cursor-pointer">
+
+          <div className="text-white text-lg flex gap-5">
+            <Link href="/" className="hover:opacity-80 cursor-pointer">
               <IoLogoLinkedin />
             </Link>
-            <Link href="/" className=" hover:opacity-90 cursor-pointer">
+            <Link href="/" className="hover:opacity-80 cursor-pointer">
               <IoLogoFacebook />
             </Link>
-          </p>
-          <div className="text-white space-y-2">
+          </div>
+
+          <div className="text-white/85 text-sm space-y-1.5">
             <p>
-              Address: Unit 5A, 609 William Street Cobourg, Ontario, K9A 3A6,
-              Canada
+              Phone:{" "}
+              <a
+                href={`tel:+1${CLINIC_CONTACT.phone}`}
+                className="hover:text-[#0B95C7] transition-colors"
+              >
+                {CLINIC_CONTACT.phoneFormatted}
+              </a>
             </p>
-            <p>Open: Mon-Fri 9:30AM - 5:00PM, Sat 10:00AM - 4:00PM</p>
-            <p>Phone: 6475089094</p>
-            <p>Fax: (905) 2917547</p>
+            <p>Fax: {CLINIC_CONTACT.fax}</p>
+            <p>
+              Email:{" "}
+              <a
+                href={`mailto:${CLINIC_CONTACT.email}`}
+                className="hover:text-[#0B95C7] transition-colors"
+              >
+                {CLINIC_CONTACT.email}
+              </a>
+            </p>
           </div>
         </div>
-        <FooterNavWeb />
-        <FooterNavMobile />
+
+        {/* Navigation + Two Locations */}
+        <div className="lg:col-span-7 flex flex-col gap-10">
+          <FooterNavWeb />
+          <FooterNavMobile />
+
+          <div className="border-t border-white/15 pt-8">
+            <p className="text-white text-xs font-semibold uppercase tracking-wider mb-5">
+              Our Cobourg Locations
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {CLINIC_BRANCHES.map((branch) => (
+                <div key={branch.id} className="space-y-1.5">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <p className="font-semibold text-sm text-[#0B95C7]">
+                      {branch.shortAddress}
+                    </p>
+                    {branch.acceptingNewPatients && (
+                      <span className="bg-emerald-500/20 text-emerald-300 text-[10px] font-semibold px-2 py-0.5 rounded-full">
+                        Accepting New Patients
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-white/80 text-xs leading-relaxed">
+                    {branch.fullAddress}
+                  </p>
+                  <p className="text-white/95 text-xs font-medium">
+                    {branch.leadDoctor.name}
+                  </p>
+                  <p className="text-white/65 text-xs">
+                    {branch.hours.weekday} &bull; {branch.hours.saturday}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="flex items-center border-t pt-3">
+      <div className="flex items-center gap-3 border-t border-white/15 pt-5">
         <div className="relative w-full max-w-[100px] ">
           <Image
             className="w-10 h-10"

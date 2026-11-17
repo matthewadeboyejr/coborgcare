@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Book an Appointment",
   description:
-    "Book an appointment at Cobourg Care Clinic. Schedule online with our experienced doctors for consultations, preventive screenings, immunizations, blood work, and more.",
+    "Book an appointment at Cobourg Care Clinic across our two Cobourg branches: 609 William Street (Dr. Isah Usman & Dr. Paul) and 628 Ontario Street (Dr. Sunday — accepting new patients).",
   openGraph: {
     title: "Book an Appointment | Cobourg Care Clinic",
     description:

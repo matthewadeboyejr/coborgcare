@@ -3,7 +3,9 @@ import "./globals.css";
 import Footer from "@/components/home/Footer";
 import NavBar from "@/components/NavBar";
 import Progress from "@/components/ProgressBar";
-import PreventiveHealthPopup from "@/components/FamilyDayPopup";
+// Paused for now — keep FamilyDayPopup.jsx intact so it can be re-enabled later.
+// import PreventiveHealthPopup from "@/components/FamilyDayPopup";
+import NewPatientPopup from "@/components/NewPatientPopup";
 import ChatBot from "@/components/ChatBot";
 import Script from "next/script";
 
@@ -24,7 +26,7 @@ export const metadata = {
     template: "%s | Cobourg Care Clinic",
   },
   description:
-    "Accessible, quality healthcare for Cobourg families. We offer compassionate medical care, preventive health screenings, immunizations, walk-in appointments, and chronic disease management.",
+    "Accessible, quality healthcare for Cobourg families across two Cobourg locations (609 William Street & 628 Ontario Street). Now accepting new family practice patients and walk-ins.",
   keywords: [
     "Cobourg clinic",
     "family doctor Cobourg",
@@ -95,7 +97,8 @@ export default function RootLayout({ children }) {
           />
         </noscript>
         <NavBar />
-        <PreventiveHealthPopup />
+        {/* <PreventiveHealthPopup /> */}
+        <NewPatientPopup />
         <Progress />
         {children}
         <Footer />

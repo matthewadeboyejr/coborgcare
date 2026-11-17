@@ -12,11 +12,11 @@ import {
 } from "react-icons/ri";
 
 const SUGGESTIONS = [
-  "How much is a sick note?",
-  "What are your opening hours?",
+  "Are you accepting new patients?",
+  "Where are your two locations?",
   "How do I book blood work?",
-  "Do I have to pay for a WSIB form?",
-  "What payment methods are accepted?",
+  "What are your opening hours?",
+  "How much is a sick note?",
 ];
 
 // Helper to parse simple markdown bolding **text**
