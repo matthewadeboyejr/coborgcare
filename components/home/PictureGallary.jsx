@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 import {
   RiArrowLeftSLine,
   RiArrowRightSLine,
@@ -75,24 +74,22 @@ function OpeningEventCard({ event }) {
     >
       {/* Carousel */}
       <div className="relative w-full lg:w-[60%] h-[420px] sm:h-[540px] lg:h-[620px] xl:h-[680px] overflow-hidden rounded-2xl bg-gray-900/5">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={`${event.id}-${current}`}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
-            className="absolute inset-0"
+        {event.images.map((img, idx) => (
+          <div
+            key={img.src}
+            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+              current === idx ? "opacity-100 z-[1]" : "opacity-0 z-0"
+            }`}
           >
             <Image
-              src={event.images[current].src}
-              alt={event.images[current].alt}
+              src={img.src}
+              alt={img.alt}
               fill
               className="object-cover object-top"
-              priority={event.isHighlighted && current === 0}
+              priority={event.isHighlighted && idx === 0}
             />
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        ))}
 
         {/* Top-left Location Overlay Badge */}
         <div className="absolute top-4 left-4 z-10 inline-flex items-center gap-1.5 bg-black/65 backdrop-blur-md text-white text-xs font-medium px-3.5 py-1.5 rounded-full">
